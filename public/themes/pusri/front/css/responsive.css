@@ -1,4 +1,6 @@
 @media only screen and (min-width : 768px) {
+
+
   .nav.navbar-nav > li:hover > ul.sub-menu{
     display: block;
     -webkit-animation: fadeInUp 1000ms;
@@ -38,10 +40,17 @@
   .col-sm-4.portfolio-item{
     width: 33%;
   }
+  .menu-container{
+      width: 90%;
+  }
 }
 
 /* md */
 @media only screen and (max-width : 1200px) {
+
+  .menu-container{
+      width: 90%;
+  }
 
   /*Pricing Table*/
   .single-price .plan-price:after {
@@ -72,6 +81,14 @@
 
   h1{
     font-size: 25px;
+  }
+
+  .menu-container{
+      width: 87%;
+  }
+
+  #header .navbar-nav.navbar-right >li a{
+    font-size: 0.5em;
   }
 
   #header .navbar-nav.navbar-right li {
@@ -199,6 +216,9 @@
 
   h2{
     font-size:20px;
+  }
+  .menu-container{
+    width: 85%;
   }
 
   .padding{
@@ -543,6 +563,25 @@
 @media only screen and (max-width : 480px) {
 
   /* Pricing Table*/
+
+  #header .navbar-nav.navbar-right >li a {
+    font-size: 0.8em;
+  }
+
+  #header .navbar-nav.navbar-right li {
+    padding: 0;
+    width: 100%;
+  }
+
+  #header .navbar-nav li ul.sub-menu li a {
+    color: #2d2d2d;
+    padding: 10px;
+    font-size: 12px;
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 50px;
+}
 
   .single-price, .single-table {
     margin-bottom: 35px;

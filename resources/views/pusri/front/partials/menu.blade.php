@@ -29,9 +29,9 @@
                 
             </div>
             <div class="collapse navbar-collapse">
-                <ul class="col-md-8 nav navbar-nav navbar-right">
+                <ul class="col-md-9 nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#"><b>Perusahaan <i class="fa fa-angle-down"></i></b></a>
+                        <a href="#"><b>Perusahaan</b> <i class="fa fa-angle-down pull-right"></i></a>
                         <ul role="menu" class="sub-menu">
                             <div class="col-md-8 pull-right">
                                 <li>
@@ -90,42 +90,65 @@
                         </ul>
                     </li>                    
                     <li class="dropdown">
-                        <a href="#">Blog <i class="fa fa-angle-down"></i></a>
+                        <a href="#"><b>Distribusi & Penjualan <i class="fa fa-angle-down"></i></b></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="#">Blog Default</a></li>
-                            <li><a href="#">Timeline Blog</a></li>
-                            <li><a href="#">2 Columns + Right Sidebar</a></li>
-                            <li><a href="#">1 Column + Left Sidebar</a></li>
-                            <li><a href="#">Blog Masonary</a></li>
-                            <li><a href="#">Blog Details</a></li>
+                            <div class="col-md-8 pull-right">
+                                <li>
+                                    <a href="#">Distribusi  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Distributor  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Penjualan  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Pengecer  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                            </div>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Portfolio <i class="fa fa-angle-down"></i></a>
+                        <a href="#"><b>Laporan <i class="fa fa-angle-down"></i></b></a>
                         <ul role="menu" class="sub-menu">
-                            <li>
-                                <a href="#">Portfolio Default</a>
-                            </li>
-                            <li>
-                                <a href="#">Isotope 3 Columns + Right Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">3 Columns + Right Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">3 Columns + Left Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">2 Columns</a>
-                            </li>
-                            <li>
-                                <a href="#">Portfolio Details</a>
-                            </li>
+                            <div class="col-md-8 pull-right">
+                                <li>
+                                    <a href="#">Produksi  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Keuangan  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Penjualan  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">Laporan Tahunan  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                            </div>
                         </ul>
                     </li>                         
-                    <li>
-                        <a href="#">Shortcodes</a>
-                    </li>                    
+                    <li class="dropdown">
+                        <a href="#"><b>GCG <i class="fa fa-angle-down"></i></b></a>
+                        <ul role="menu" class="sub-menu">
+                            <div class="col-md-8 pull-right">
+                                <li>
+                                    <a href="#">SEKILAS GOOD CORPORATE GOVERNANCE  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">PEDOMAN ETIKA USAHA DAN TATA PRILAKU  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">FAKTA INTEGRITAS  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#">SISTEM PENGENDALIAN INTERN  <i class="fa fa-angle-right pull-right"></i></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li> 
+                    <li class="dropdown">
+                    <a href="#"><b>CSR <i class="fa fa-angle-down"></i></b></a>
+                    </li>                   
                 </ul>
             </div>
             <div class="search">
