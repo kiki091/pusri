@@ -1,65 +1,26 @@
 <meta charset="utf-8">
-<title>White | responsive bootstrap3 html5 one page template</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
+<title>PT Pupuk Sriwidjaja Palembang (Pusri) | Home</title>
+<meta name="author" content="PT Pupuk Sriwidjaja Palembang (Pusri)" />
+<meta name="publisher" content="www.pusri.co.id" />
+<meta name="copyright" content="www.pusri.co.id" />
+<meta name="host" content="www.pusri.co.id" />
+<meta name="geo.position" content="0.18597,117.47865" />    
+<meta name="geo.region" content="ID-JB" />
+<meta name="geo.country" content="ID"/>
+<meta name="geo.placename" content="Palembang, Indonesia" />
+<meta name="ICBM" content="0.18597,117.47865" />    
+<meta name="DC.title" content="Pt Pupuk Sriwidjaja Palembang (pusri)" />
 
-<link rel="shortcut icon" href="images/favicon.ico">
 
-<!-- CSS -->
-<link href="{{ asset('themes/pusri/front/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('themes/pusri/front/css/flexslider.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('themes/pusri/front/css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('themes/pusri/front/css/animate.css') }}" rel="stylesheet" type="text/css" media="all" />
-<link href="{{ asset('themes/pusri/front/css/owl.carousel.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/style.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('themes/pusri/front/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('themes/pusri/front/css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('themes/pusri/front/css/animate.min.css') }}" rel="stylesheet"> 
+<link href="{{ asset('themes/pusri/front/css/lightbox.css') }}" rel="stylesheet"> 
+<link href="{{ asset('themes/pusri/front/css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('themes/pusri/front/css/responsive.css') }}" rel="stylesheet">   
+<link href="{{ asset('themes/pusri/front/css/style.css') }}" rel="stylesheet">    
+<link rel="shortcut icon" href="images/ico/favicon.ico">
 
-<!-- FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">	
-
-<!-- SCRIPTS -->
-<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<!--[if IE]><html class="ie" lang="en"> <![endif]-->
-
-<script src="{{ asset('themes/pusri/front/js/jquery.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/jquery.prettyPhoto.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/jquery.nicescroll.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/superfish.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/jquery.flexslider-min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/owl.carousel.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/animate.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/pusri/front/js/jquery.BlackAndWhite.js') }}"></script>
-<script src="{{ asset('themes/pusri/front/js/myscript.js') }}" type="text/javascript"></script>
-
-<script>
-
-	//PrettyPhoto
-	jQuery(document).ready(function() {
-		$("a[rel^='prettyPhoto']").prettyPhoto();
-	});
-	
-	//BlackAndWhite
-	$(window).load(function(){
-		$('.client_img').BlackAndWhite({
-			hoverEffect : true, // default true
-			// set the path to BnWWorker.js for a superfast implementation
-			webworkerPath : false,
-			// for the images with a fluid width and height 
-			responsive:true,
-			// to invert the hover effect
-			invertHoverEffect: false,
-			// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-			intensity:1,
-			speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-				fadeIn: 300, // 200ms for fadeIn animations
-				fadeOut: 300 // 800ms for fadeOut animations
-			},
-			onImageReady:function(img) {
-				// this callback gets executed anytime an image is converted
-			}
-		});
-	});
-	
-</script>
