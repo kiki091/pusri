@@ -12,12 +12,11 @@
 		<div class="preloader_hide">
 
 			<!-- PAGE -->
-			<div id="page">
-				@include('pusri.front.partials.menu')
+			@include('pusri.front.partials.top-menu')
+			@include('pusri.front.partials.menu')
 
-				@yield('content')
-				
-			</div>
+			@yield('content')
+
 			@include('pusri.front.partials.footer')
 
 		</div>

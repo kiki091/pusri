@@ -14,13 +14,17 @@
 <meta name="ICBM" content="0.18597,117.47865" />    
 <meta name="DC.title" content="Pt Pupuk Sriwidjaja Palembang (pusri)" />
 
-
+<link href="{{ asset('themes/pusri/front/css/font-awesome.css') }}" rel="stylesheet">
 <link href="{{ asset('themes/pusri/front/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/font-awesome.min.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/animate.min.css') }}" rel="stylesheet"> 
-<link href="{{ asset('themes/pusri/front/css/lightbox.css') }}" rel="stylesheet"> 
-<link href="{{ asset('themes/pusri/front/css/main.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/responsive.css') }}" rel="stylesheet">   
-<link href="{{ asset('themes/pusri/front/css/style.css') }}" rel="stylesheet">    
-<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link href="{{ asset('themes/pusri/front/css/animate.min.css') }}" rel="stylesheet">
+<link href="{{ asset('themes/pusri/front/css/owl.carousel.css') }}" rel="stylesheet">
+<link href="{{ asset('themes/pusri/front/css/owl.theme.css') }}" rel="stylesheet">
+<link href="{{ asset('themes/pusri/front/css/loader.css') }}" rel="stylesheet">  
 
+<!-- theme stylesheet -->
+<link href="{{ asset('themes/pusri/front/css/style.default.css') }}" rel="stylesheet" id="theme-stylesheet">
+<!-- your stylesheet with modifications -->
+<link href="{{ asset('themes/pusri/front/css/custom.css') }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('themes/pusri/front/dropdown/css/style6.css') }}" />
+<script src="{{ asset('themes/pusri/front/dropdown/js/modernizr.custom.63321.js') }}"></script>
+<script src="{{ asset('themes/pusri/front/js/respond.min.js') }}"></script>

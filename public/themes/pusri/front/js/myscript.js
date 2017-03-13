@@ -13,24 +13,6 @@ jQuery(window).load(function () {
 
 });
 
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	NICESCROLL
-/*-----------------------------------------------------------------------------------*/
-jQuery(document).ready(function() {
-	jQuery("body").niceScroll({
-		cursorcolor:"#333",
-		cursorborder:"0px",
-		cursorwidth :"8px",
-		zindex:"9999"
-	});
-});
-
-
-
-
-
 /*-----------------------------------------------------------------------------------*/
 /*	MENU
 /*-----------------------------------------------------------------------------------*/
@@ -77,57 +59,6 @@ jQuery(document).ready(function() {
 	};
 });
 
-
-
-
-
-
-	
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	FLEXSLIDER
-/*-----------------------------------------------------------------------------------*/
-jQuery(window).load(function(){
-	//Top Slider
-	$('.flexslider.top_slider').flexslider({
-		animation: "fade",
-		controlNav: false,
-		directionNav: true,
-		animationLoop: false,
-		slideshow: false,
-		prevText: "",
-		nextText: "",
-		sync: "#carousel"
-	});
-	$('#carousel').flexslider({
-		animation: "fade",
-		controlNav: false,
-		animationLoop: false,
-		directionNav: false,
-		slideshow: false,
-		itemWidth: 100,
-		itemMargin: 5,
-		asNavFor: '.top_slider'
-	});
-	
-	homeHeight();
-	
-	
-	jQuery('.flexslider.top_slider .flex-direction-nav').addClass('container');
-	
-	
-	//Vision Slider
-	$('.flexslider.portfolio_single_slider').flexslider({
-		animation: "fade",
-		controlNav: true,
-		directionNav: true,
-		animationLoop: false,
-		slideshow: false,
-	});
-	
-	
-});
 
 jQuery(window).resize(function(){
 	homeHeight();
