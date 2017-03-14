@@ -3,23 +3,35 @@
             <div class="navbar-header">
 
                 <a class="navbar-brand home" href="#" data-animate-hover="bounce">
-                    <img src="{{ asset('bin/db/images/logo/logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" class="hidden-xs" title="PT Pupuk Sriwidjaja Palembang (Pusri)" style="height: 100%">
+                    <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" class="hidden-xs" title="PT Pupuk Sriwidjaja Palembang (Pusri)" style="height: 100%">
                     
-                    <img src="{{ asset('bin/db/images/logo/logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" title="PT Pupuk Sriwidjaja Palembang (Pusri)" class="visible-xs" style="height: 100%;"><span class="sr-only">Nusantara Group</span>
+                    <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" title="PT Pupuk Sriwidjaja Palembang (Pusri)" class="visible-xs" style="height: 100%;">
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
                         <span class="sr-only">Toggle navigation</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
-                        <span class="sr-only">Toggle search</span>
-                        <i class="fa fa-search"></i>
-                    </button>
                 </div>
             </div>
             <!--/.navbar-header -->
             
+            
+
+            <div id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+                          </span>
+                    </div>
+                </form>
+            </div>
+            <hr style="clear: both;" />
             <!-- MENU HEADER -->
             <div class="navbar-collapse collapse" id="navigation">
 
@@ -106,30 +118,7 @@
 
             </div>
             <!--/.nav-collapse -->
-
-            <div class="navbar-buttons">
-                <div class="navbar-collapse collapse right" id="search-not-mobile">
-                    <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
-                        <span class="sr-only">Toggle search</span>
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="collapse clearfix" id="search">
-
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-btn">
-
-                             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-
-                          </span>
-                    </div>
-                </form>
-            </div>
+            
             <!--/.nav-collapse -->
         </div>
         <!-- /.container -->
