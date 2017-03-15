@@ -22,7 +22,7 @@ class Navigation extends Model
 
     public function menu_tran()
     {
-        return $this->belongsTo('App\Models\NavigationTrans', 'id', 'menu_id');
+        return $this->belongsTo('App\Models\NavigationTrans', 'id', 'menu_id')->where('locale', '=' , $this->getCurrentLocalize());
     }
 
     public function sub_menu()

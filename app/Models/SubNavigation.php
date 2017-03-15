@@ -17,7 +17,7 @@ class SubNavigation extends Model
 
     public function sub_menu_trans()
     {
-        return $this->hasMany('App\Models\SubNavigationTrans', 'sub_menu_id', 'id');
+        return $this->hasMany('App\Models\SubNavigationTrans', 'sub_menu_id', 'id')->where('locale', '=' , $this->getCurrentLocalize());
     }
 
 
