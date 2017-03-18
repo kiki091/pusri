@@ -3138,7 +3138,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.88);
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #ccc;

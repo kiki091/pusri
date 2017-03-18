@@ -9,7 +9,7 @@
 		<img id="preloader" src="{{ asset('themes/pusri/front/images/preloader.gif') }}" alt="Loading Page" title="Loading Page" />
 
 		<!-- //PRELOADER -->
-		<div class="preloader_hide">
+		<div class="preloader_hide" style="min-height: 1000px;">
 
 			<!-- PAGE -->
 			@include('pusri.front.partials.top-menu')

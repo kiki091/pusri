@@ -27,6 +27,7 @@ mix.styles([
 mix.scripts([
 	'public/themes/pusri/front/js/jquery-1.11.0.min.js',
 	'public/themes/pusri/front/js/bootstrap.min.js',
+	'public/themes/pusri/front/js/scroll-menu.js',
 	'public/themes/pusri/front/dropdown/js/modernizr.custom.63321.js',
 	'public/themes/pusri/front/js/respond.min.js',
 	'public/themes/pusri/front/js/jquery.cookie.js',
