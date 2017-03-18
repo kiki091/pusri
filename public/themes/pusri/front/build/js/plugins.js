@@ -12,7 +12,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 
 jQuery("document").ready(function($){
 	
-	var nav = $('#navbar');
+	var nav = $('#navigation-menu');
 	
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 50) {

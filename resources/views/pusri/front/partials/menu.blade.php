@@ -1,37 +1,37 @@
 <div class="navbar navbar-default yamm" role="navigation" id="navbar">
-        <div class="container">
-            <div class="navbar-header">
+    <div class="container">
+        <div class="navbar-header">
 
-                <a class="navbar-brand home" href="#" data-animate-hover="bounce">
-                    <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" class="hidden-xs" title="PT Pupuk Sriwidjaja Palembang (Pusri)" style="height: 100%">
-                    
-                    <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" title="PT Pupuk Sriwidjaja Palembang (Pusri)" class="visible-xs" style="height: 100%;">
-                </a>
-                <div class="navbar-buttons">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="fa fa-align-justify"></i>
-                    </button>
+            <a class="navbar-brand home" href="#" data-animate-hover="bounce">
+                <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" class="hidden-xs" title="PT Pupuk Sriwidjaja Palembang (Pusri)" style="height: 100%">
+                
+                <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" title="PT Pupuk Sriwidjaja Palembang (Pusri)" class="visible-xs" style="height: 100%;">
+            </a>
+            <div class="navbar-buttons">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-align-justify"></i>
+                </button>
+            </div>
+        </div>
+        <!--/.navbar-header -->
+        <div id="search">
+
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+
+                         <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+                      </span>
                 </div>
-            </div>
-            <!--/.navbar-header -->
-            
-            
-
-            <div id="search">
-
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-btn">
-
-                             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-
-                          </span>
-                    </div>
-                </form>
-            </div>
-            <hr style="clear: both;" />
+            </form>
+        </div>
+        <hr style="clear: both;" />
+    </div>
+    <div id="navigation-menu">
+        <div class="container">
             <!-- MENU HEADER -->
             <div class="navbar-collapse collapse" id="navigation">
 
@@ -429,8 +429,9 @@
             
             <!--/.nav-collapse -->
         </div>
-        <!-- /.container -->
     </div>
+        <!-- /.container -->
+</div>
     <!-- /#navbar -->
     <!-- *** NAVBAR END *** -->
 

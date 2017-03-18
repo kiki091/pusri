@@ -1,7 +1,7 @@
 
 jQuery("document").ready(function($){
 	
-	var nav = $('#navbar');
+	var nav = $('#navigation-menu');
 	
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 50) {
