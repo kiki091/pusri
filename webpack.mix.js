@@ -15,12 +15,10 @@ const { mix } = require('laravel-mix');
 mix.styles([
     'public/themes/pusri/front/css/bootstrap.min.css',
     'public/themes/pusri/front/css/animate.min.css',
-    'public/themes/pusri/front/css/owl.carousel.css',
-    'public/themes/pusri/front/css/owl.theme.css',
     'public/themes/pusri/front/css/loader.css',
     'public/themes/pusri/front/css/style.default.css',
     'public/themes/pusri/front/css/custom.css',
-    'public/themes/pusri/front/dropdown/css/style6.css',
+    'public/themes/pusri/front/css/slider-def.css',
 ], 'public/themes/pusri/front/build/css/plugins.css');
 
 
@@ -31,12 +29,10 @@ mix.scripts([
 	'public/themes/pusri/front/js/bootstrap.min.js',
 	'public/themes/pusri/front/dropdown/js/modernizr.custom.63321.js',
 	'public/themes/pusri/front/js/respond.min.js',
-	'public/themes/pusri/front/js/scroll-menu.js',
 	'public/themes/pusri/front/js/jquery.cookie.js',
 	'public/themes/pusri/front/js/waypoints.min.js',
 	'public/themes/pusri/front/js/modernizr.js',
 	'public/themes/pusri/front/js/bootstrap-hover-dropdown.js',
-	'public/themes/pusri/front/js/owl.carousel.min.js',
 	'public/themes/pusri/front/js/front.js',
 	'public/themes/pusri/front/dropdown/js/jquery.dropdown.js',
 	'public/themes/pusri/front/js/myscript.js',
