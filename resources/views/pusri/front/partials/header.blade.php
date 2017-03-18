@@ -15,16 +15,5 @@
 <meta name="DC.title" content="Pt Pupuk Sriwidjaja Palembang (pusri)" />
 
 <link href="{{ asset('themes/pusri/front/css/font-awesome.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/animate.min.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/owl.carousel.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/owl.theme.css') }}" rel="stylesheet">
-<link href="{{ asset('themes/pusri/front/css/loader.css') }}" rel="stylesheet">  
-
-<!-- theme stylesheet -->
-<link href="{{ asset('themes/pusri/front/css/style.default.css') }}" rel="stylesheet" id="theme-stylesheet">
-<!-- your stylesheet with modifications -->
-<link href="{{ asset('themes/pusri/front/css/custom.css') }}" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{{ asset('themes/pusri/front/dropdown/css/style6.css') }}" />
-<script src="{{ asset('themes/pusri/front/dropdown/js/modernizr.custom.63321.js') }}"></script>
-<script src="{{ asset('themes/pusri/front/js/respond.min.js') }}"></script>
+<link href="{{ asset('themes/pusri/front/build/css/plugins.css') }}" rel="stylesheet">
+<script src="{{ asset('themes/pusri/front/build/js/plugins.js') }}"></script>

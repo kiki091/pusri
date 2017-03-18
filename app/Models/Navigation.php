@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
-class Navigation extends Model
+class Navigation extends BaseModel
 {
 	protected $table = 'menu';
     public $timestamps = true;
@@ -17,7 +17,7 @@ class Navigation extends Model
 
     public function menu_trans()
     {
-        return $this->hasMany('App\Models\NavigationTrans', 'menu_id', 'id');
+        return $this->hasMany('App\Models\NavigationTrans', 'menu_id', 'id')->where('locale', '=' , $this->getCurrentLocalize());
     }
 
     public function menu_tran()

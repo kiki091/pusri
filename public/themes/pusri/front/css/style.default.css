@@ -18,6 +18,12 @@ h1 {
   font-weight: 700;
   font-size: 40px;
 }
+.font-white {
+  color: #FFFFFF;
+}
+
+.f-nav{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;}
+
 #top {
   background: #555555;
   padding: 10px 0;
@@ -27,6 +33,50 @@ h1 {
 }
 #top .offer .btn {
   text-transform: uppercase;
+}
+.secondmenu_left {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+.secondmenu_left ul {
+    list-style: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.secondmenu_left .toggle_menu2 {
+    background-color: transparent;
+    padding-bottom: 13px;
+    border-top: none;
+    display: none;
+}
+.secondmenu_left .toggle_menu2 a {
+    height: 22px;
+    width: 22px;
+    text-indent: -999em;
+    display: block;
+    padding: 0px;
+}
+.secondmenu_left li {
+    float: left;
+}
+.secondmenu_left li a {
+    font-family: 'helvetica77';
+    color: #FFFFFF;
+    font-size: 13px;
+    border-right: #FFFFFF solid 1px;
+    padding: 1px 15px;
+}
+
+@media (max-width: 939px){
+  .secondmenu_left {
+      display: none;
+      visibility: hidden;
+  }
+  
 }
 @media (max-width: 991px) {
   #top .offer {
@@ -40,7 +90,13 @@ h1 {
   }
 }
 #top a {
-  color: #fff;
+  color: #2d2d2d;
+}
+#top a:hover {
+  text-decoration: none;
+}
+#top a, .font-white {
+  color: #FFFFFF;
 }
 #top ul.menu {
   padding-top: 5px;

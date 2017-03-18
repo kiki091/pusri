@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Implementation;
 
+use LaravelLocalization;
 use Request;
 use Session;
 use Cache;
@@ -10,6 +11,26 @@ use Auth;
 
 class BaseImplementation
 {
+
+    /**
+     * Get Current Locale
+     * @return mixed
+     */
+    public function getCurrentLocalize()
+    {
+        $currentLocale  = LaravelLocalization::getCurrentLocale();
+        return $currentLocale;
+    }
+
+    /**
+     * Get Support Locale
+     * @return mixed
+     */
+    public function getSupportedLanguagesKeys()
+    {
+        $supportLocale  = LaravelLocalization::getSupportedLanguagesKeys();
+        return $supportLocale;
+    }
 
 	/**
      * Set Response

@@ -14,6 +14,16 @@ class Navigation
     }
 
     /**
+     * Get Data Top Navigation
+     * @param $params
+     * @return mixed
+     */
+    public function getTopNavigation()
+    {
+        return $this->navigation->getTopNavigation();
+    }
+
+    /**
      * Get Data Navigation
      * @param $params
      * @return mixed

@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
-class NavigationTrans extends Model
+class NavigationTrans extends BaseModel
 {
 	protected $table = 'menu_trans';
     public $timestamps = true;

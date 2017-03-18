@@ -11,6 +11,53 @@ class Navigation
      * @return array|void
      */
 
+    // Get Transformation Top Navigation
+
+    public function getTopNavigationTransform($data)
+    {
+        if(!is_array($data) || empty($data))
+            return array();
+
+
+        return $this->setTopNavigationTransform($data);
+    }
+
+    // Set Transformation Top Navigation
+
+    protected function setTopNavigationTransform($data)
+    {
+        $dataTranform = array_map(function($data)
+        {
+            return [
+                'top_menu'          => $this->getTopNavigationTranslation($data['top_menu_trans'])
+            ];
+
+        },$data);
+
+        return $dataTranform;
+        
+    }
+
+    // Get Transformation Top Navigation Translation
+
+    protected function getTopNavigationTranslation($data)
+    {
+        $dataTranform = array_map(function($data)
+        {
+            return [
+
+                'locale'        => isset($data['locale']) ? $data['locale'] : '',
+                'title'         => isset($data['title']) ? strtoupper($data['title']) : '',
+                'slug'          => isset($data['slug']) ? $data['slug'] : '',
+            ];
+        },$data);
+
+        return $dataTranform;
+
+
+    }
+
+    // Get Transformation Navigation
 
 	public function getNavigationTransform($data)
     {
@@ -21,12 +68,17 @@ class Navigation
         return $this->setNavigationTransform($data);
     }
 
+    // Set Transformation Navigation
+
     protected function setNavigationTransform($data)
     {
         $dataTranform = array_map(function($data)
         {
             return [
-                'menu' => $this->getNavigationTranslation($data['menu_trans']),
+                'menu'          => [
+                    'class'             => isset($data['class']) ? $data['class'] : '',
+                    'menu_trans'        => $this->getNavigationTranslation($data['menu_trans']),
+                ],
                 'sub_menu' => $this->getSubNavigationTranslation($data['sub_menu']['sub_menu_trans'])
             ];
 
@@ -36,6 +88,8 @@ class Navigation
         
     }
 
+    // Get Transformation Navigation Translation
+
     protected function getNavigationTranslation($data)
     {
     	$dataTranform = array_map(function($data)
@@ -43,7 +97,7 @@ class Navigation
     		return [
 
     			'locale'		=> isset($data['locale']) ? $data['locale'] : '',
-                'title'         => isset($data['title']) ? $data['title'] : '',
+                'title'         => isset($data['title']) ? strtoupper($data['title']) : '',
                 'slug'          => isset($data['slug']) ? $data['slug'] : '',
     		];
     	},$data);
@@ -53,6 +107,8 @@ class Navigation
 
     }
 
+    // Get Transformation Sub Navigation Translation
+
     protected function getSubNavigationTranslation($data)
     {
         
@@ -61,11 +117,15 @@ class Navigation
     		return [
     		
     			'locale'     => isset($data['locale']) ? $data['locale'] : '',
-                'title'         => isset($data['title']) ? $data['title'] : '',
+                'title'         => isset($data['title']) ? strtoupper($data['title']) : '',
                 'slug'          => isset($data['slug']) ? $data['slug'] : '',
     		];
     	},$data);
 
-        return $dataTranform;
+        // krsort($dataTranform);
+        $rows = ceil(count($dataTranform) / 5); // calculate slice to 5 items per row
+        $piecesSub_nav = array_chunk($dataTranform, ceil(count($dataTranform) / $rows), true);
+
+        return $piecesSub_nav;
     }
 }

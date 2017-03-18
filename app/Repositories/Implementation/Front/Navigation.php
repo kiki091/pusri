@@ -4,11 +4,14 @@ namespace App\Repositories\Implementation\Front;
 
 use App\Repositories\Contracts\Front\Navigation as NavigationInterface;
 use App\Repositories\Implementation\BaseImplementation;
+use App\Models\TopNavigation as TopNavigationServices;
+use App\Models\TopNavigationTrans as TopNavigationTransServices;
 use App\Models\Navigation as NavigationServices;
 use App\Models\NavigationTrans as NavigationTransServices;
 use App\Models\SubNavigation as SubNavigationServices;
 use App\Models\SubNavigationTrans as SubNavigationServicesTrans;
 use App\Services\Transformation\Front\Navigation as NavigationTransformation;
+use LaravelLocalization;
 use Cache;
 use Session;
 use DB;
@@ -16,6 +19,8 @@ use DB;
 class Navigation extends BaseImplementation implements NavigationInterface
 {
 	protected $message;
+    protected $topNavigation;
+    protected $topNavigationTrans;
     protected $navigation;
     protected $navigationTrans;
     protected $subNavigation;
@@ -23,36 +28,86 @@ class Navigation extends BaseImplementation implements NavigationInterface
     protected $navigationTransformation;
 
 
-    function __construct(NavigationServices $navigation, NavigationTransServices $navigationTrans, SubNavigationServices $subNavigation, SubNavigationServicesTrans $subNavigationTrans, NavigationTransformation $navigationTransformation)
+    function __construct(TopNavigationServices $topNavigation, TopNavigationTransServices $topNavigationTrans, NavigationServices $navigation, NavigationTransServices $navigationTrans, SubNavigationServices $subNavigation, SubNavigationServicesTrans $subNavigationTrans, NavigationTransformation $navigationTransformation)
     {
-    	$this->navigation = $navigation;
+    	$this->topNavigation = $topNavigation;
+        $this->topNavigationTrans = $topNavigationTrans;
+        $this->navigation = $navigation;
     	$this->navigationTrans = $navigationTrans;
     	$this->subNavigation = $subNavigation;
     	$this->subNavigationTrans = $subNavigationTrans;
     	$this->navigationTransformation = $navigationTransformation;
     }
 
-    public function getNavigation()
+    public function getTopNavigation()
     {
     	$data = [
     		'is_active' => true,
     	];
 
-    	$navigationData = $this->navigation($data, 'asc', 'array', true);
-       	//$subNavigationData = $this->subNavigation('', $navigationData);
+    	$topNavigationData = $this->topNavigation($data, 'asc', 'array', true);
+        
+        return $this->navigationTransformation->getTopNavigationTransform($topNavigationData);
+    }
+
+    public function getNavigation()
+    {
+        $data = [
+            'is_active' => true,
+        ];
+
+        $navigationData = $this->navigation($data, 'asc', 'array', true);
         
         return $this->navigationTransformation->getNavigationTransform($navigationData);
     }
 
     /**
-     * Get All Data
+     * Get All Data Top Navigation
+     * Warning: this function doesn't redis cache
+     * @param array $params
+     * @return array
+     */
+    protected function topNavigation($data = array(), $orderType = 'asc', $returnType = 'array', $returnSingle = false)
+    {
+    	$topNavigation = $this->topNavigation
+            ->with('top_menu_tran')
+            ->with('top_menu_trans');
+
+        if(isset($data['is_active'])) {
+            $topNavigation->isActive($data['is_active']);
+        }
+
+        if(isset($params['order_by'])) {
+            $topNavigation->orderBy('order', $orderType);
+        }
+
+        if(!$topNavigation->count())
+            return array();
+
+        switch ($returnType) {
+            case 'array':
+                if($returnSingle) 
+                {
+                    return $topNavigation->get()->toArray();
+                } 
+                else 
+                {
+                    return $topNavigation->first()->toArray();
+                }
+
+            break;
+        }
+    }
+
+    /**
+     * Get All Data Navigation
      * Warning: this function doesn't redis cache
      * @param array $params
      * @return array
      */
     protected function navigation($data = array(), $orderType = 'asc', $returnType = 'array', $returnSingle = false)
     {
-    	$navigation = $this->navigation
+        $navigation = $this->navigation
             ->with('menu_tran')
             ->with('menu_trans')
             ->with('sub_menu');
@@ -62,8 +117,6 @@ class Navigation extends BaseImplementation implements NavigationInterface
         }
 
         if(isset($params['order_by'])) {
-            $navigation->orderBy($params['order_by'], $orderType);
-        } else {
             $navigation->orderBy('order', $orderType);
         }
 
@@ -89,26 +142,4 @@ class Navigation extends BaseImplementation implements NavigationInterface
         }
     }
 
-    /**
-     * Get Data Sub Navigation
-     * Warning: this function doesn't redis cache
-     * @param $data
-     */
-    protected function subNavigation($menuId = '', $data = array())
-    {
-    	if(empty($menuId) && empty($data))
-            return array();
-
-        if(empty($menuId) && !empty($data)) {
-            $menuId = isset($data['id']) ? $data['id'] : '';
-        }
-
-        $related = $this->subNavigation
-            ->with('sub_menu_trans');
-
-        if(!$related->count())
-            return array();
-
-        return $related->get()->toArray();
-    }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
-class SubNavigation extends Model
+class SubNavigation extends BaseModel
 {
 	protected $table = 'sub_menu';
     public $timestamps = true;
