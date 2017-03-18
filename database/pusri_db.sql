@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: pusri_db
 -- ------------------------------------------------------
--- Server version	5.7.17-0ubuntu0.16.04.1
+-- Server version	5.7.17-0ubuntu0.16.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -191,7 +191,7 @@ CREATE TABLE `sub_menu` (
 
 LOCK TABLES `sub_menu` WRITE;
 /*!40000 ALTER TABLE `sub_menu` DISABLE KEYS */;
-INSERT INTO `sub_menu` VALUES (1,1,1,1,NULL,NULL,NULL),(11,1,1,2,NULL,NULL,NULL);
+INSERT INTO `sub_menu` VALUES (1,1,1,1,NULL,NULL,NULL),(11,1,2,2,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `sub_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -212,7 +212,7 @@ CREATE TABLE `sub_menu_trans` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug_UNIQUE` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -221,8 +221,66 @@ CREATE TABLE `sub_menu_trans` (
 
 LOCK TABLES `sub_menu_trans` WRITE;
 /*!40000 ALTER TABLE `sub_menu_trans` DISABLE KEYS */;
-INSERT INTO `sub_menu_trans` VALUES (1,'id','Profil','profil',1,NULL,NULL),(2,'en','Profile','profile',1,NULL,NULL),(3,'id','Tata Nilai Perusahaan','tata-nilai-perusahaan',1,NULL,NULL),(4,'en','Company Value','company-value',1,NULL,NULL),(5,'id','Pengelolaan','pengelolaan',1,NULL,NULL),(6,'en','Management','management',1,NULL,NULL),(7,'id','Pengadaan','pengadaan',1,NULL,NULL),(8,'en','Procurement','procurement',1,NULL,NULL),(9,'id','Sertifikasi','sertifikasi',1,NULL,NULL),(10,'en','Certifications','certifications',1,NULL,NULL),(11,'id','Visi, Misi & Makna Perusahaan','visi-misi-perusahaan',1,NULL,NULL),(12,'en','Vision, Mission and Meaning Company','vision-mission-meaning-company',1,NULL,NULL),(13,'id','Identitas Perusahaan','identitas-perusahaan',1,NULL,NULL),(14,'en','Company identity','company-identity',1,NULL,NULL),(15,'id','Makna Logo','makna-logo',1,NULL,NULL),(16,'en','Meaning of Logo','meaning-of-ogo',1,NULL,NULL),(17,'id','Perjalanan Kami','perjalanan-kami',1,NULL,NULL),(18,'en','Our Journey','our-journey',1,NULL,NULL),(19,'id','Anak Perusahaan','anak-perusahaan',1,NULL,NULL),(20,'en','Subsidiary','subsidiary',1,NULL,NULL),(23,'id','Urea','urea',11,NULL,NULL),(24,'en','Urea','ureas',11,NULL,NULL);
+INSERT INTO `sub_menu_trans` VALUES (1,'id','Profil','profil',1,NULL,NULL),(2,'en','Profile','profile',1,NULL,NULL),(3,'id','Tata Nilai Perusahaan','tata-nilai-perusahaan',1,NULL,NULL),(4,'en','Company Value','company-value',1,NULL,NULL),(5,'id','Pengelolaan','pengelolaan',1,NULL,NULL),(6,'en','Management','management',1,NULL,NULL),(7,'id','Pengadaan','pengadaan',1,NULL,NULL),(8,'en','Procurement','procurement',1,NULL,NULL),(9,'id','Sertifikasi','sertifikasi',1,NULL,NULL),(10,'en','Certifications','certifications',1,NULL,NULL),(11,'id','Visi, Misi & Makna Perusahaan','visi-misi-perusahaan',1,NULL,NULL),(12,'en','Vision, Mission and Meaning Company','vision-mission-meaning-company',1,NULL,NULL),(13,'id','Identitas Perusahaan','identitas-perusahaan',1,NULL,NULL),(14,'en','Company identity','company-identity',1,NULL,NULL),(15,'id','Makna Logo','makna-logo',1,NULL,NULL),(16,'en','Meaning of Logo','meaning-of-ogo',1,NULL,NULL),(17,'id','Perjalanan Kami','perjalanan-kami',1,NULL,NULL),(18,'en','Our Journey','our-journey',1,NULL,NULL),(19,'id','Anak Perusahaan','anak-perusahaan',1,NULL,NULL),(20,'en','Subsidiary','subsidiary',1,NULL,NULL),(23,'id','Urea','urea',11,NULL,NULL),(24,'en','Urea','ureas',11,NULL,NULL),(25,'id','NPK Fusion','npk-fusion',11,NULL,NULL),(26,'en','NPK Fusion','npk-fusions',11,NULL,NULL),(27,'id','Amonia','amonia',11,NULL,NULL),(28,'en','Ammonia','ammonia',11,NULL,NULL),(29,'id','Produk Riset','produk-riset',11,NULL,NULL),(30,'en','Research','research',11,NULL,NULL);
 /*!40000 ALTER TABLE `sub_menu_trans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `top_menu`
+--
+
+DROP TABLE IF EXISTS `top_menu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `top_menu` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `is_active` int(1) DEFAULT NULL,
+  `order` int(2) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `top_menu`
+--
+
+LOCK TABLES `top_menu` WRITE;
+/*!40000 ALTER TABLE `top_menu` DISABLE KEYS */;
+INSERT INTO `top_menu` VALUES (1,1,1,NULL,NULL),(2,1,2,NULL,NULL),(3,1,3,NULL,NULL),(4,1,4,NULL,NULL),(5,1,5,NULL,NULL),(6,1,6,NULL,NULL),(7,1,7,NULL,NULL);
+/*!40000 ALTER TABLE `top_menu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `top_menu_trans`
+--
+
+DROP TABLE IF EXISTS `top_menu_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `top_menu_trans` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `title` varchar(150) DEFAULT NULL,
+  `slug` varchar(200) DEFAULT NULL,
+  `top_menu_id` int(5) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_top_menu_trans_1_idx` (`top_menu_id`),
+  CONSTRAINT `fk_top_menu_trans_1` FOREIGN KEY (`top_menu_id`) REFERENCES `top_menu` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `top_menu_trans`
+--
+
+LOCK TABLES `top_menu_trans` WRITE;
+/*!40000 ALTER TABLE `top_menu_trans` DISABLE KEYS */;
+INSERT INTO `top_menu_trans` VALUES (1,'id','Beranda','beranda',1,NULL,NULL),(2,'en','Home','home',1,NULL,NULL),(3,'id','Peta Situs','peta-situs',2,NULL,NULL),(4,'en','Site Map','site-mao',2,NULL,NULL),(5,'id','Tautan','tautan',3,NULL,NULL),(6,'en','Link','link',3,NULL,NULL),(7,'id','Stok Pupuk','stok-pupuk',4,NULL,NULL),(8,'en','Stock','stock',4,NULL,NULL),(9,'id','Karir','karir',5,NULL,NULL),(10,'en','Career','career',5,NULL,NULL),(11,'id','Email Website','email-website',6,NULL,NULL),(12,'en','Web Mail','web-mail',6,NULL,NULL),(13,'id','Pertanyaan Bantuan','pertanyaan-bantuan',7,NULL,NULL),(14,'en','FAQ','faq',7,NULL,NULL);
+/*!40000 ALTER TABLE `top_menu_trans` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -234,4 +292,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-15  0:07:32
+-- Dump completed on 2017-03-19  2:19:01
