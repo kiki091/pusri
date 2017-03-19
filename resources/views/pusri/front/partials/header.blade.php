@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Pt Pupuk Sriwidjaja Palembang (pusri)">
+<meta name="author" content="PT. Asia Resource System">
 <title>PT Pupuk Sriwidjaja Palembang (Pusri) | Home</title>
 <meta name="author" content="PT Pupuk Sriwidjaja Palembang (Pusri)" />
 <meta name="publisher" content="www.pusri.co.id" />

@@ -1,67 +1,39 @@
 @extends('pusri.front.layout.master')
 @section('content')
-
+@if(isset($main_banner))
+<section id="image-slider">
 	<!-- Slider -->
     <div id="slider">
-      <div class="slides">
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <h1>Lorem ipsum dolor</h1>
-              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
-            </div>
-          </div>
-          <div class="image">
-            <img src="{{ asset('bin/db/images/banner/slide1_bg.jpg') }}">
-          </div>
-        </div>
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <h1>Lorem ipsum dolor</h1>
-              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
-            </div>
-          </div>
-          <div class="image">
-            <img src="{{ asset('bin/db/images/banner/slide1_bg.jpg') }}">
-          </div>
-        </div>
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <h1>Lorem ipsum dolor</h1>
-              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
-            </div>
-          </div>
-          <div class="image">
-            <img src="{{ asset('bin/db/images/banner/slide1_bg.jpg') }}">
-          </div>
-        </div>
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <h1>Lorem ipsum dolor</h1>
-              <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
-            </div>
-          </div>
-          <div class="image">
-            <img src="{{ asset('bin/db/images/banner/slide1_bg.jpg') }}">
-          </div>
-        </div>
-      </div>
-      <div class="switch">
-        <ul>
-          <li>
-            <div class="on"></div>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
+      	<div class="slides">
+      		@foreach($main_banner as $key=> $banner)
+	        <div class="slider">
+	          	<div class="legend"></div>
+	          	<div class="content">
+	            	<div class="content-txt">
+	              		<h1>{{ $banner['title'] }}</h1>
+	              		<h2>{{ $banner['description'] }}</h2>
+	            	</div>
+	          	</div>
+	          	<div class="image">
+	            	<img src="{{ $banner['image_url'] }}">
+	          	</div>
+	        </div>
+	        @endforeach
+      	</div>
+      	<div class="switch">
+	        <ul>
+	        @for($i=0;$i < count($main_banner); $i++)
+	        	@if($i == 0)
+		        <li>
+		            <div class="on"></div>
+		        </li>
+		        @else
+		        <li></li>
+		        @endif
+		    @endfor
+	        </ul>
+      	</div>
     </div>
+</section>
+@endif
 @endsection
