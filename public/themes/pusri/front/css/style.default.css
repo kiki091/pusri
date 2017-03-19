@@ -1,3 +1,4 @@
+@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome/fontawesome-webfont.eot?v=4.5.0);src:url(../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(../fonts/fontawesome/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),url('../fonts/VideoJS.eot'),url(../fonts/VideoJS.woff) format('woff')}
 a,
 button {
   -webkit-transition: all 0.2s ease-out;
@@ -22,7 +23,9 @@ h1 {
   color: #FFFFFF;
 }
 
-.f-nav{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%; background: #FFF}
+.f-nav{ 
+  z-index: 9999; position: fixed; left: 0; top: 0; width: 100%; background: #FFF;-webkit-transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;-moz-transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;-o-transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;-webkit-box-shadow: 0 0 10px rgba(70,70,70,.2);box-shadow: 0 0 10px rgba(70,70,70,.2);
+}
 
 #top {
   background: #555555;
@@ -138,7 +141,10 @@ h1 {
   margin-bottom: 20px;
 }
 .navbar .yamm-content h5 {
-  font-size: 18px;
+  font-family: "Gotham A","Gotham B",Verdana,Geneva,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   padding-bottom: 10px;
@@ -163,6 +169,9 @@ h1 {
   color: #999999;
   font-size: 12px;
   display: block;
+  font-family: "Gotham A","Gotham B",Verdana,Geneva,sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 .navbar .yamm-content ul li a:hover {
   color: #4fbfa8;
@@ -1054,9 +1063,7 @@ h1 {
   }
 }
 .yamm .dropdown.yamm-fw .dropdown-menu {
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.87);
+  left: 0;right: 0;background: rgb(255, 255, 255);-webkit-transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;-moz-transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;-o-transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;transition: all .5s cubic-bezier(.645,.045,.355,1) 0s;
 }
 /* Original Boostrap template overwrite */
 /* nav */
@@ -1315,7 +1322,15 @@ h1 {
   color: #777777;
 }
 .navbar-default .navbar-nav > li > a {
+  font-family: "Gotham A","Gotham B",Verdana,Geneva,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 50px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
   color: #777777;
+  display: block;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -1325,7 +1340,7 @@ h1 {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background-color: #555555;
+  
   color: #ffffff;
 }
 .navbar-default .navbar-nav > .disabled > a,
@@ -1350,8 +1365,8 @@ h1 {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #555555;
-  color: #ffffff;
+  background-color: rgba(231, 231, 231, 0.22);
+  color: #777777;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -1387,7 +1402,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #f0f0f0;
+  background-color: #FFFFFF;
 }
 a {
   color: #4fbfa8;

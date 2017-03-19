@@ -52,7 +52,7 @@ class MainBanner extends BaseImplementation implements MainBannerInterface
     }
 
     /**
-     * Get All Data Navigation
+     * Get All Data Main Banner
      * Warning: this function doesn't redis cache
      * @param array $params
      * @return array

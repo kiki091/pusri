@@ -36,4 +36,44 @@
     </div>
 </section>
 @endif
+@if(isset($company_overview))
+<section id="company-overview" class="page">
+	<!-- Begin page header-->
+    <div class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                <h2>{{ $company_overview['title'] }}</h2>
+                <div class="devider"></div>
+                <h3 class="subtitle">{!! $company_overview['side_description'] !!}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="rotate-box-1-wrapper">
+    	<div class="container">
+	    	<div class="col-md-6">
+	    		<div id="home-introduction-content" class="skill-bar wow slideInLeft" data-wow-delay="0.2s">
+	    			<div class="default-content">
+	    				
+	    				{!! $company_overview['description_left'] !!}
+	    				
+	    			</div>
+	    		</div>
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<div id="home-introduction-content" class="skill-bar wow slideInRight" data-wow-delay="0.2s">
+	    			<div class="default-content">
+	    				<p>
+	    					{!! $company_overview['description_right'] !!}
+	    					<a class="arrow-cta float-right-version">
+	    						{{ trans('global_page.global_page_lable_link_cta') }}
+	    					</a>
+	    				</p>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+</section>
+@endif
 @endsection

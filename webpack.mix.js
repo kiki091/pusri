@@ -13,6 +13,7 @@ const { mix } = require('laravel-mix');
 
 // for plugin css
 mix.styles([
+    'public/themes/pusri/front/css/bootstrap.css',
     'public/themes/pusri/front/css/bootstrap.min.css',
     'public/themes/pusri/front/css/animate.min.css',
     'public/themes/pusri/front/css/loader.css',
@@ -28,14 +29,18 @@ mix.scripts([
 	'public/themes/pusri/front/js/jquery-1.11.0.min.js',
 	'public/themes/pusri/front/js/bootstrap.min.js',
 	'public/themes/pusri/front/js/scroll-menu.js',
-	'public/themes/pusri/front/dropdown/js/modernizr.custom.63321.js',
 	'public/themes/pusri/front/js/respond.min.js',
 	'public/themes/pusri/front/js/jquery.cookie.js',
-	'public/themes/pusri/front/js/waypoints.min.js',
 	'public/themes/pusri/front/js/modernizr.js',
-	'public/themes/pusri/front/js/bootstrap-hover-dropdown.js',
 	'public/themes/pusri/front/js/front.js',
-	'public/themes/pusri/front/dropdown/js/jquery.dropdown.js',
 	'public/themes/pusri/front/js/myscript.js',
 ], 'public/themes/pusri/front/build/js/plugins.js');
 
+mix.scripts([
+	'public/themes/pusri/front/js/owl.carousel.min.js',
+	'public/themes/pusri/front/js/jquery.stellar.min.js',
+	'public/themes/pusri/front/js/wow.min.js',
+	'public/themes/pusri/front/js/waypoints.min.js',
+	'public/themes/pusri/front/js/smoothscroll.js',
+	'public/themes/pusri/front/js/theme.js',
+], 'public/themes/pusri/front/build/js/animation.js');

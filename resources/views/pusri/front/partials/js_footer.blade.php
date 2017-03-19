@@ -1,4 +1,5 @@
 
+<script src="{{ asset('themes/pusri/front/build/js/animation.js') }}"></script>
 <script type="text/javascript">
 	
 	$( function() {
