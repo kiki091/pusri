@@ -164,6 +164,12 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Custom Service Providers...
+         */
+
+        App\Providers\PusriHelperServiceProvider::class,
+
+        /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
@@ -228,6 +234,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'PusriHelper'=> App\Custom\Facades\PusriHelper::class,
         'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ],

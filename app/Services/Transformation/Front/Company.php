@@ -2,6 +2,8 @@
 
 namespace App\Services\Transformation\Front;
 
+use App\Custom\PusriHelper;
+ 
 class Company
 {
 	/**
@@ -14,6 +16,9 @@ class Company
         if(!is_array($data) || empty($data))
             return array();
 
+        /*$company['desktop'] = $this->setCompanyForLandingDesktopTransform($data);
+        $company['mobile'] = $this->setCompanyForLandingMobileTransform($data);*/
+        
         return $this->setCompanyForLandingTransform($data);
     }
 
@@ -21,9 +26,15 @@ class Company
     {
     	$dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
     	$dataTransform['side_description'] = isset($data['translation']['side_description']) ? $data['translation']['side_description'] : '';
-    	$dataTransform['description_left'] = isset($data['translation']['description']) ? substr($data['translation']['description'],0,681) : '';
-    	$dataTransform['description_right'] = isset($data['translation']['description']) ? substr($data['translation']['description'],681,620) : '';
 
+        if(PusriHelper::getCurrentLanguageKey() == "id")
+        {
+    	   $dataTransform['description_left'] = isset($data['translation']['description']) ? substr($data['translation']['description'],0,681) : '';
+    	   $dataTransform['description_right'] = isset($data['translation']['description']) ? substr($data['translation']['description'],681,620) : '';
+        }else {
+            $dataTransform['description_left'] = isset($data['translation']['description']) ? substr($data['translation']['description'],0,713) : '';
+            $dataTransform['description_right'] = isset($data['translation']['description']) ? substr($data['translation']['description'],713,620) : '';
+        }
     	return $dataTransform;
     }
 }

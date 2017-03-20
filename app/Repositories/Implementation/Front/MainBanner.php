@@ -72,10 +72,7 @@ class MainBanner extends BaseImplementation implements MainBannerInterface
         }
 
         if(isset($params['order_by'])) {
-            $mainBanner->orderBy($params['order_by'], $orderType);
-        } else {
             $mainBanner->orderBy('order', $orderType);
-            $mainBanner->orderBy('created_at', 'desc');
         }
 
         if(!$mainBanner->count())

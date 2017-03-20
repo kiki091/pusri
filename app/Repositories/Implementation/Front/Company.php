@@ -30,6 +30,7 @@ class Company extends BaseImplementation implements CompanyInterface
     {
     	$params = [
             "is_active" => true,
+            "is_show_landing" => true,
         ];
 
         $companyData = $this->company($params);
