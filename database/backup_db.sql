@@ -27,6 +27,7 @@ CREATE TABLE `category` (
   `thumbnail` varchar(200) DEFAULT NULL,
   `order` int(2) DEFAULT NULL,
   `is_active` int(1) DEFAULT NULL,
+  `is_landing` int(1) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -39,7 +40,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'thumbnail-perusahaan.jpg',1,1,NULL,NULL),(2,NULL,2,1,NULL,NULL),(3,'thumbnail-distribusi-marketing.jpg',3,1,NULL,NULL),(4,NULL,4,1,NULL,NULL),(5,NULL,5,1,NULL,NULL),(6,'thumbnail-csr.jpg',6,1,NULL,NULL),(7,NULL,7,1,NULL,NULL),(8,NULL,8,1,NULL,NULL),(9,'thumbnail-recruitment.gif',9,1,NULL,NULL);
+INSERT INTO `category` VALUES (1,'thumbnail-perusahaan.jpg',1,1,1,NULL,NULL),(2,'thumbnail-produk.jpg',2,1,1,NULL,NULL),(3,'thumbnail-distribusi-marketing.jpg',3,1,1,NULL,NULL),(4,'thumbnail-laporan.jpg',4,1,0,NULL,NULL),(5,'thumbnail-gcg.jpg',5,1,0,NULL,NULL),(6,'thumbnail-csr.jpg',6,1,1,NULL,NULL),(7,NULL,7,1,0,NULL,NULL),(8,NULL,8,1,0,NULL,NULL),(9,'thumbnail-recruitment.gif',9,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -414,4 +415,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-19 21:59:53
+-- Dump completed on 2017-03-22 23:58:02

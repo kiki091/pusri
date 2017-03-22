@@ -39,9 +39,17 @@ class Category extends BaseModel
     /**
      * @param $query
      */
-    public function scopeIsShowLanding($query, $params = true)
+    public function scopeIsActive($query, $params = true)
     {
-        return $query->where('is_show_landing', $params);
+        return $query->where('is_active', $params);
+    }
+
+    /**
+     * @param $query
+     */
+    public function scopeIsLanding($query, $params = true)
+    {
+        return $query->where('is_landing', $params);
     }
 
     /**

@@ -4,7 +4,7 @@
     color: #797478;
     font: 10px/1.5 Verdana, Helvetica, sans-serif;
     float: left;
-    width: 15%;
+    width: 20%;
     margin: 0px auto;
     opacity: 0.5;
 }
@@ -15,6 +15,12 @@
 
 .galleryItem h3 {
 	text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    margin-left: 3%;
+    font-size: 18px;
+    display: inline-table;
+    font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
 }
 
 .galleryItem img {

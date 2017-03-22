@@ -89,10 +89,11 @@
 	        </div>
 	    </div>
 
-		<div class="col-md-12" style="margin-top: 2%">
+		<div class="col-md-12" style="margin-top: 2%;margin-bottom: 2%">
 			@foreach($category as $key=> $category_value)
 			<div class="galleryItem">
 				<a href="#"><img src="{{ $category_value['thumbnail_url'] }}" alt="" /></a>
+				<h3>{{ $category_value['title'] }}</h3>
 			</div>
 			@endforeach
 		</div>

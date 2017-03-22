@@ -29,7 +29,8 @@ class Category extends BaseImplementation implements CategoryInterface
     public function getCategoryForLanding($params = array())
     {
     	$params = [
-            "is_active" => true
+            "is_active" => true,
+            "is_landing" => true
         ];
 
         $categoryData = $this->category($params);
@@ -49,10 +50,14 @@ class Category extends BaseImplementation implements CategoryInterface
             ->with('translation')
             ->with('translations');
 
-        /*if(isset($params['is_active'])) {
+        if(isset($params['is_active'])) {
             $category->isActive($params['is_active']);
         }
-*/
+
+        if(isset($params['is_landing'])) {
+            $category->isLanding($params['is_landing']);
+        }
+
         if(!$category->count())
             return array();
 
