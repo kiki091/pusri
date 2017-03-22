@@ -31,7 +31,7 @@
         <hr style="clear: both;" />
     </div>
     <div id="navigation-menu">
-        <div class="container">
+        <div class="container-menu">
             <!-- MENU HEADER -->
             <div class="navbar-collapse collapse" id="navigation">
 

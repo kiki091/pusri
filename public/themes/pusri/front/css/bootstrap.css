@@ -264,8 +264,6 @@ th {
   font-family: 'Glyphicons Halflings';
 
   src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/VideoJS.eot');
-  src: url(../fonts/VideoJS.woff) format('woff');
   src:url(../fonts/fontawesome/fontawesome-webfont.eot?v=4.5.0);src:url(../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),url(../fonts/fontawesome/fontawesome-webfont.woff2?v=4.5.0) format('woff2');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
@@ -1399,18 +1397,33 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+.container-menu {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+  .container-menu {
+    width: 99%;
   }
 }
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+  .container-menu {
+    width: 970px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
+    width: 1170px;
+  }
+  .container-menu {
     width: 1170px;
   }
 }
