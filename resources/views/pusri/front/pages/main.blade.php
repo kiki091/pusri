@@ -76,41 +76,28 @@
     </div>
 </section>
 @endif
+@if(isset($category))
 <section id="desktop content-news" class="bg-gray-transparant">
-	<div class="page-header-wrapper">
-        <div class="container">
-            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                <h2></h2>
-                <div class="devider"></div>
-            </div>
-        </div>
-    </div>
-	<div class="col-md-12" style="margin-top: 2%">
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
-		</div>
-		<div class="galleryItem">
-			<a href="#"><img src="https://designshack.net/wp-content/uploads/responsivegallery-8.jpg" alt="" /></a>
+    <div class="container">
+
+		<div class="page-header-wrapper">
+	        <div class="container">
+	            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+	                <h2></h2>
+	                <div class="devider"></div>
+	            </div>
+	        </div>
+	    </div>
+
+		<div class="col-md-12" style="margin-top: 2%">
+			@foreach($category as $key=> $category_value)
+			<div class="galleryItem">
+				<a href="#"><img src="{{ $category_value['thumbnail_url'] }}" alt="" /></a>
+			</div>
+			@endforeach
 		</div>
 
 	</div>
 </section>
+@endif
 @endsection

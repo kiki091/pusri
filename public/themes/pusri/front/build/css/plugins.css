@@ -8421,7 +8421,7 @@ h3.subtitle {
 
 /* MEDIA QUERIES*/
 @media only screen and (max-width : 940px),only screen and (max-device-width : 940px){
-	.galleryItem {width: 25%;}
+	.galleryItem {width: 21%;}
 }
 
 @media only screen and (max-width : 720px),only screen and (max-device-width : 720px){
