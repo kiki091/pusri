@@ -101,4 +101,35 @@
 	</div>
 </section>
 @endif
+<section id="latest-news">
+	<div class="page-header-wrapper">
+        <div class="container">
+            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                <h2>Berita Terkini</h2>
+                <div class="devider"></div>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="news_landing_grid">
+				<h2>Title Untuk Berita</h2>
+				<img src="http://locbiznethome.com/images/whatyouget/whatyouget-1.png">
+				<p>
+				Biznet Home Internet and Cable TV are fast and reliable service built for the best home network and entertainment experience. We only deliver good quality internet speed and TV content for our customer.
+				</p>
+			</div>
+		</div>
+
+		<div class="row-fluid">
+			<div class="news_landing_grid">
+				<h2>Title Untuk Berita</h2>
+				<img src="http://locbiznethome.com/images/whatyouget/whatyouget-1.png">
+				<p>
+				Biznet Home Internet and Cable TV are fast and reliable service built for the best home network and entertainment experience. We only deliver good quality internet speed and TV content for our customer.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
 @endsection

@@ -21,6 +21,7 @@ mix.styles([
     'public/themes/pusri/front/css/custom.css',
     'public/themes/pusri/front/css/slider-def.css',
     'public/themes/pusri/front/css/gallery.css',
+    'public/themes/pusri/front/css/news.css',
 ], 'public/themes/pusri/front/build/css/plugins.css');
 
 

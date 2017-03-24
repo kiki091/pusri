@@ -21,6 +21,7 @@
     font-size: 18px;
     display: inline-table;
     font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
+    display: inline-table;
 }
 
 .galleryItem img {
