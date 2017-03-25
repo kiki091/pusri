@@ -21,3 +21,9 @@ define('MAIN_BANNER_TRANS_IMAGE_DIRECTORY', 'bin/db/images/banner/');
 // Category Thumbnail Images
 
 define('CATEGORY_THUMBNAIL_DIRECTORY', 'bin/db/images/category/');
+
+
+// News And Event Thumbnail Images
+
+define('NEWS_THUMBNAIL_DIRECTORY', 'bin/db/images/news/');
+define('NEWS_IMAGES_DIRECTORY', 'bin/db/images/news/');

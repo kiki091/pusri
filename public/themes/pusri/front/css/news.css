@@ -1,3 +1,4 @@
+
 @media (max-width: 600px){
 	.row-fluid {
 	    border-bottom: none;
@@ -11,7 +12,7 @@
 
 
 .row-fluid {
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 0px;
 }
 .row-fluid:after, .row-fluid:before {
     display: table;
@@ -27,25 +28,33 @@
     float: left;
     min-height: 20px;
     box-sizing: border-box;
+    padding-top: 0px;
 }
 
 .news_landing_grid h2 {
-	font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
-    font-size: 34px;
-    color: #212121;
+	font-family: 'Philosopher', sans-serif;
+    font-style: normal;
     font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    vertical-align: baseline;
+    text-align: center;
 }
 
 .news_landing_grid img {
 	max-width: 100%;
     height: auto;
     outline: 0;
+    opacity: 0.6;
 }
 
 .news_landing_grid p {
 	color: #626262;
     font-size: 14px;
     line-height: 24px;
+    margin-top: 3%;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
 }
 
 .news_landing_grid: after {
@@ -57,4 +66,12 @@
     margin: auto;
     height: 90%;
     border-right: 1px solid #eaeaea;
+}
+
+@media (max-width: 480px){
+    .news_landing_grid {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10%;
+    }
 }

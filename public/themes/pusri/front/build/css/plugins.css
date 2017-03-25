@@ -8008,6 +8008,7 @@ address {
 /** Your theme modifications here **/
 
 /** Section Style Landing Page About **/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Libre+Baskerville');
 
 .page {
     overflow: hidden;background-color: #fff;padding: 50px 0;
@@ -8018,7 +8019,7 @@ address {
 }
 
 .page-header { 
-	margin: 0 0 60px 0; padding: 0; border: none;visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;
+	margin: 0 0 20px 0; padding: 0; border: none;visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;
 }
 
 .page-header h2 {
@@ -8053,6 +8054,14 @@ h3.subtitle {
     float: right;
 }
 
+.arrow-cta.float-center-version {
+    display: table;
+}
+
+.arrow-cta.float-left-version {
+    float: left;
+}
+
 .arrow-cta {
     font-family: "Gotham A","Gotham B",Verdana,Geneva,sans-serif;font-style: normal;font-weight: 500;font-size: 13px;line-height: 21px;text-transform: uppercase;letter-spacing: .075em;color: #464646;display: inline-block;vertical-align: top;zoom: 1;padding-right: 18px;position: relative;cursor: pointer;text-decoration: none;
 }
@@ -8067,6 +8076,52 @@ h3.subtitle {
 
 .default-content p .first-letter {
     font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif; font-style: normal; font-weight: 400; font-size: 58px; line-height: 56px; color: #464646; text-transform: uppercase; float: left; margin-right: 8px; margin-bottom: -4px;
+}
+
+.group-landing-news-item {
+    position: relative;
+    padding-left: 60px;
+    min-height: 55px;
+    padding-top: 5px;
+    margin-bottom: 35px;
+}
+
+.group-landing-news-item .news-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 50px;
+    background: #acbfc6;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.group-landing-news-item .news-icon img {
+    display: block;
+    height: 54px;
+    position: absolute;
+    top: -2px;
+    left: -2.5px;
+}
+
+.group-landing-news-item h2 {
+    font-family: "Harriet Display Medium",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: .05em;
+    color: #707070;
+    margin-top: 0px;
+    margin-bottom: -1px;
+}
+
+.group-landing-news-item p {
+    color: #707070;
 }
 /* Reset */
 *{margin:0;padding:0;}
@@ -8445,6 +8500,7 @@ h3.subtitle {
 	.galleryItem h3 {font-size: 18px;}
 	.galleryItem p, {font-size: 18px;}
 }
+
 @media (max-width: 600px){
 	.row-fluid {
 	    border-bottom: none;
@@ -8458,7 +8514,7 @@ h3.subtitle {
 
 
 .row-fluid {
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 0px;
 }
 .row-fluid:after, .row-fluid:before {
     display: table;
@@ -8474,25 +8530,33 @@ h3.subtitle {
     float: left;
     min-height: 20px;
     box-sizing: border-box;
+    padding-top: 0px;
 }
 
 .news_landing_grid h2 {
-	font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
-    font-size: 34px;
-    color: #212121;
+	font-family: 'Philosopher', sans-serif;
+    font-style: normal;
     font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    vertical-align: baseline;
+    text-align: center;
 }
 
 .news_landing_grid img {
 	max-width: 100%;
     height: auto;
     outline: 0;
+    opacity: 0.6;
 }
 
 .news_landing_grid p {
 	color: #626262;
     font-size: 14px;
     line-height: 24px;
+    margin-top: 3%;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
 }
 
 .news_landing_grid: after {
@@ -8504,4 +8568,12 @@ h3.subtitle {
     margin: auto;
     height: 90%;
     border-right: 1px solid #eaeaea;
+}
+
+@media (max-width: 480px){
+    .news_landing_grid {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10%;
+    }
 }

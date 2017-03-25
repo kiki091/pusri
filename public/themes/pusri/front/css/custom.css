@@ -1,6 +1,7 @@
 /** Your theme modifications here **/
 
 /** Section Style Landing Page About **/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Libre+Baskerville');
 
 .page {
     overflow: hidden;background-color: #fff;padding: 50px 0;
@@ -11,7 +12,7 @@
 }
 
 .page-header { 
-	margin: 0 0 60px 0; padding: 0; border: none;visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;
+	margin: 0 0 20px 0; padding: 0; border: none;visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;
 }
 
 .page-header h2 {
@@ -46,6 +47,14 @@ h3.subtitle {
     float: right;
 }
 
+.arrow-cta.float-center-version {
+    display: table;
+}
+
+.arrow-cta.float-left-version {
+    float: left;
+}
+
 .arrow-cta {
     font-family: "Gotham A","Gotham B",Verdana,Geneva,sans-serif;font-style: normal;font-weight: 500;font-size: 13px;line-height: 21px;text-transform: uppercase;letter-spacing: .075em;color: #464646;display: inline-block;vertical-align: top;zoom: 1;padding-right: 18px;position: relative;cursor: pointer;text-decoration: none;
 }
@@ -60,4 +69,50 @@ h3.subtitle {
 
 .default-content p .first-letter {
     font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif; font-style: normal; font-weight: 400; font-size: 58px; line-height: 56px; color: #464646; text-transform: uppercase; float: left; margin-right: 8px; margin-bottom: -4px;
+}
+
+.group-landing-news-item {
+    position: relative;
+    padding-left: 60px;
+    min-height: 55px;
+    padding-top: 5px;
+    margin-bottom: 35px;
+}
+
+.group-landing-news-item .news-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 50px;
+    background: #acbfc6;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.group-landing-news-item .news-icon img {
+    display: block;
+    height: 54px;
+    position: absolute;
+    top: -2px;
+    left: -2.5px;
+}
+
+.group-landing-news-item h2 {
+    font-family: "Harriet Display Medium",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: .05em;
+    color: #707070;
+    margin-top: 0px;
+    margin-bottom: -1px;
+}
+
+.group-landing-news-item p {
+    color: #707070;
 }

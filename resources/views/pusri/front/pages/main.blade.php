@@ -76,58 +76,36 @@
     </div>
 </section>
 @endif
-@if(isset($category))
-<section id="desktop content-news" class="bg-gray-transparant">
-    <div class="container">
 
-		<div class="page-header-wrapper">
-	        <div class="container">
-	            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-	                <h2></h2>
-	                <div class="devider"></div>
-	            </div>
-	        </div>
-	    </div>
-
-		<div class="col-md-12" style="margin-top: 2%;margin-bottom: 2%">
-			@foreach($category as $key=> $category_value)
-			<div class="galleryItem">
-				<a href="#"><img src="{{ $category_value['thumbnail_url'] }}" alt="" /></a>
-				<h3>{{ $category_value['title'] }}</h3>
-			</div>
-			@endforeach
-		</div>
-
-	</div>
-</section>
-@endif
-<section id="latest-news">
-	<div class="page-header-wrapper">
-        <div class="container">
-            <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                <h2>Berita Terkini</h2>
-                <div class="devider"></div>
-            </div>
-        </div>
-    </div>
+<section id="latest-news" class="bg-gray-transparant">
 	<div class="container">
-		<div class="row-fluid">
+		<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+            <h2>Berita Terkini</h2>
+            <div class="devider"></div>
+        </div>
+		<div class="row-fluid skill-bar wow slideInLeft" data-wow-delay="0.4s">
 			<div class="news_landing_grid">
+				<img src="{{ asset(NEWS_THUMBNAIL_DIRECTORY.'news_1.JPG') }}">
 				<h2>Title Untuk Berita</h2>
-				<img src="http://locbiznethome.com/images/whatyouget/whatyouget-1.png">
 				<p>
 				Biznet Home Internet and Cable TV are fast and reliable service built for the best home network and entertainment experience. We only deliver good quality internet speed and TV content for our customer.
 				</p>
+				<a class="arrow-cta float-right-version text-center">
+	    			{{ trans('global_page.global_page_lable_link_cta') }}
+	    		</a>
 			</div>
 		</div>
 
-		<div class="row-fluid">
+		<div class="row-fluid skill-bar wow slideInRight" data-wow-delay="0.4s">
 			<div class="news_landing_grid">
+				<img src="{{ asset(NEWS_THUMBNAIL_DIRECTORY.'news_2.JPG') }}">
 				<h2>Title Untuk Berita</h2>
-				<img src="http://locbiznethome.com/images/whatyouget/whatyouget-1.png">
 				<p>
 				Biznet Home Internet and Cable TV are fast and reliable service built for the best home network and entertainment experience. We only deliver good quality internet speed and TV content for our customer.
 				</p>
+				<a class="arrow-cta float-right-version text-center">
+	    			{{ trans('global_page.global_page_lable_link_cta') }}
+	    		</a>
 			</div>
 		</div>
 	</div>
