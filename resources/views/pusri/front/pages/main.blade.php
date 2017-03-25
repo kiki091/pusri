@@ -76,38 +76,47 @@
     </div>
 </section>
 @endif
-
+@if(isset($news_event))
 <section id="latest-news" class="bg-gray-transparant">
 	<div class="container">
 		<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
             <h2>Berita Terkini</h2>
             <div class="devider"></div>
         </div>
+        @foreach($news_event['1'] as $key=> $news)
 		<div class="row-fluid skill-bar wow slideInLeft" data-wow-delay="0.4s">
 			<div class="news_landing_grid">
-				<img src="{{ asset(NEWS_THUMBNAIL_DIRECTORY.'news_1.JPG') }}">
-				<h2>Title Untuk Berita</h2>
+				<img src="{{ $news['thumbnail_url'] }}" alt="{{ $news['title'] }}">
+				<h2>{{ $news['title'] }}</h2>
 				<p>
-				Biznet Home Internet and Cable TV are fast and reliable service built for the best home network and entertainment experience. We only deliver good quality internet speed and TV content for our customer.
+				{{ $news['side_description'] }}
 				</p>
-				<a class="arrow-cta float-right-version text-center">
+				<center>
+				<a href="{{ $news['slug'] }}" class="arrow-cta float-center-version text-center">
 	    			{{ trans('global_page.global_page_lable_link_cta') }}
 	    		</a>
+	    		</center>
 			</div>
 		</div>
-
+		@endforeach
+		@foreach($news_event['2'] as $key=> $event)
 		<div class="row-fluid skill-bar wow slideInRight" data-wow-delay="0.4s">
 			<div class="news_landing_grid">
-				<img src="{{ asset(NEWS_THUMBNAIL_DIRECTORY.'news_2.JPG') }}">
-				<h2>Title Untuk Berita</h2>
+				<img src="{{ $event['thumbnail_url'] }}" alt="{{ $event['title'] }}">
+				<h2>{{ $event['title'] }}</h2>
 				<p>
-				Biznet Home Internet and Cable TV are fast and reliable service built for the best home network and entertainment experience. We only deliver good quality internet speed and TV content for our customer.
+				{{ $event['side_description'] }}
 				</p>
-				<a class="arrow-cta float-right-version text-center">
+				<center>
+				<a href="{{ $event['slug'] }}" class="arrow-cta float-center-version text-center">
 	    			{{ trans('global_page.global_page_lable_link_cta') }}
 	    		</a>
+	    		</center>
 			</div>
 		</div>
+		@endforeach
 	</div>
 </section>
+@endif
+<section></section>
 @endsection

@@ -8,6 +8,7 @@ use App\Services\Bridge\Front\Navigation as NavigationService;
 use App\Services\Bridge\Front\MainBanner as MainBannerService;
 use App\Services\Bridge\Front\Company as CompanyService;
 use App\Services\Bridge\Front\Category as CategoryService;
+use App\Services\Bridge\Front\NewsAndEvent as NewsAndEventService;
 use App\Services\Api\Response as ResponseService;
 
 class MainController extends FrontController
@@ -17,17 +18,19 @@ class MainController extends FrontController
     protected $mainBanner;
     protected $company;
     protected $category;
+    protected $news;
     protected $response;
 
     const MAIN_BANNER_KEY = 'mainbanner:landing';
 
-    public function __construct(NavigationService $navigation, MainBannerService $mainBanner, CompanyService $company, CategoryService $category, ResponseService $response)
+    public function __construct(NavigationService $navigation, MainBannerService $mainBanner, CompanyService $company, CategoryService $category, NewsAndEventService $news, ResponseService $response)
     {
 
     	$this->navigation = $navigation;
         $this->mainBanner = $mainBanner;
         $this->company = $company;
         $this->category = $category;
+        $this->news = $news;
         $this->response = $response;
     }
 
@@ -38,7 +41,8 @@ class MainController extends FrontController
         $data['main_banner'] = $this->mainBanner->getMainBanner(["key" => self::MAIN_BANNER_KEY]);
         $data['company_overview'] = $this->company->getDataForLanding();
         $data['category'] = $this->category->getCategoryForLanding();
-    	//dd($data['category']);
+        $data['news_event'] = $this->news->getNewsForLanding();
+    	//dd($data['news_event']);
 
         $blade = self::URL_BLADE_FRONT_SITE. '.main';
         
