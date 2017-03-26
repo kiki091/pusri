@@ -27,3 +27,9 @@ define('CATEGORY_THUMBNAIL_DIRECTORY', 'bin/db/images/category/');
 
 define('NEWS_THUMBNAIL_DIRECTORY', 'bin/db/images/news/');
 define('NEWS_IMAGES_DIRECTORY', 'bin/db/images/news/');
+
+
+// GCG Thumbnail Images
+
+define('GCG_THUMBNAIL_DIRECTORY', 'bin/db/images/gcg/');
+define('GCG_IMAGES_DIRECTORY', 'bin/db/images/gcg/');

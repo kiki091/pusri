@@ -9,6 +9,7 @@ use App\Services\Bridge\Front\MainBanner as MainBannerService;
 use App\Services\Bridge\Front\Company as CompanyService;
 use App\Services\Bridge\Front\Category as CategoryService;
 use App\Services\Bridge\Front\NewsAndEvent as NewsAndEventService;
+use App\Services\Bridge\Front\Gcg as GCGService;
 use App\Services\Api\Response as ResponseService;
 
 class MainController extends FrontController
@@ -19,11 +20,12 @@ class MainController extends FrontController
     protected $company;
     protected $category;
     protected $news;
+    protected $gcg;
     protected $response;
 
     const MAIN_BANNER_KEY = 'mainbanner:landing';
 
-    public function __construct(NavigationService $navigation, MainBannerService $mainBanner, CompanyService $company, CategoryService $category, NewsAndEventService $news, ResponseService $response)
+    public function __construct(NavigationService $navigation, MainBannerService $mainBanner, CompanyService $company, CategoryService $category, NewsAndEventService $news, GCGService $gcg, ResponseService $response)
     {
 
     	$this->navigation = $navigation;
@@ -31,6 +33,7 @@ class MainController extends FrontController
         $this->company = $company;
         $this->category = $category;
         $this->news = $news;
+        $this->gcg = $gcg;
         $this->response = $response;
     }
 
@@ -42,7 +45,8 @@ class MainController extends FrontController
         $data['company_overview'] = $this->company->getDataForLanding();
         $data['category'] = $this->category->getCategoryForLanding();
         $data['news_event'] = $this->news->getNewsForLanding();
-    	//dd($data['news_event']);
+        $data['gcg_overview'] = $this->gcg->getGCGForLanding();
+    	//dd($data['gcg_overview']);
 
         $blade = self::URL_BLADE_FRONT_SITE. '.main';
         

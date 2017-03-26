@@ -3,6 +3,10 @@
 /** Section Style Landing Page About **/
 @import url('https://fonts.googleapis.com/css?family=Courgette|Libre+Baskerville');
 
+.img-rounded {
+    border-radius: 6px;
+}
+
 .page {
     overflow: hidden;background-color: #fff;padding: 50px 0;
 }
@@ -115,4 +119,23 @@ h3.subtitle {
 
 .group-landing-news-item p {
     color: #707070;
+}
+
+#category-landing-pages p {
+    font-family: 'Open Sans',Verdana,Geneva,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #464646;
+    text-align: justify;
+}
+
+#category-landing-pages blockquote {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #464646;
+    text-align: justify;
 }

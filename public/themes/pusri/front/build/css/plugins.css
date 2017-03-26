@@ -8010,6 +8010,10 @@ address {
 /** Section Style Landing Page About **/
 @import url('https://fonts.googleapis.com/css?family=Courgette|Libre+Baskerville');
 
+.img-rounded {
+    border-radius: 6px;
+}
+
 .page {
     overflow: hidden;background-color: #fff;padding: 50px 0;
 }
@@ -8123,6 +8127,26 @@ h3.subtitle {
 .group-landing-news-item p {
     color: #707070;
 }
+
+#category-landing-pages p {
+    font-family: 'Open Sans',Verdana,Geneva,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #464646;
+    text-align: justify;
+}
+
+#category-landing-pages blockquote {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #464646;
+    text-align: justify;
+}
+
 /* Reset */
 *{margin:0;padding:0;}
 
@@ -8576,4 +8600,35 @@ h3.subtitle {
         padding: 5px;
         margin-bottom: 10%;
     }
+}
+/* Font Family Style */
+
+.first-letter {
+    font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 56px;
+    color: #464646;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: -4px;
+}
+
+.font-philosopher {
+	font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+}
+
+.font-slabo {
+	font-family: 'Slabo 27px', serif;
+}
+
+.font-handle {
+	font-family: 'Handlee', cursive;
+}
+
+.font-courgette {
+	font-family: 'Courgette', cursive;
 }

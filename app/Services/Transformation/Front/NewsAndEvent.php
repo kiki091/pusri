@@ -35,7 +35,7 @@ class NewsAndEvent
                     'thumbnail' => isset($data['thumbnail']) ? $data['thumbnail'] : '',
                     'thumbnail_url' => isset($data['thumbnail']) ? asset(NEWS_THUMBNAIL_DIRECTORY.rawurlencode($data['thumbnail'])) : '',
                     'is_active' => isset($data['is_active']) ? $data['is_active'] : '',
-                    'title' => isset($data['translation']['title']) ? substr($data['translation']['title'],0,21) : '',
+                    'title' => isset($data['translation']['title']) ? substr($data['translation']['title'],0,26) : '',
                     'slug' => isset($data['translation']['slug']) ? $data['translation']['slug'] : '',
                     'side_description' => isset($data['translation']['side_description']) ? substr($data['translation']['side_description'],0,125) : '',
                     

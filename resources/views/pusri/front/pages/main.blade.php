@@ -118,5 +118,33 @@
 	</div>
 </section>
 @endif
-<section></section>
+@if(isset($gcg_overview))
+<section id="category-landing-pages">
+	<div class="container">
+		<div class="row">
+			<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+	            <h2 class="font-courgette">{{ $gcg_overview['title'] }}</h2>
+	            <div class="devider"></div>
+	            <h3 class="subtitle">
+	            	{!! $gcg_overview['side_description'] !!}	
+	            </h3>
+	        </div>
+	        <div class="col-md-5 skill-bar wow slideInLeft" data-wow-delay="0.4s">
+	        	<img class="img-responsive img-rounded" src="{{ $gcg_overview['thumbnail_url'] }}">
+	        </div>
+	        <div class="col-md-7 skill-bar wow slideInRight" data-wow-delay="0.4s">
+	        	{!! $gcg_overview['description'] !!}
+
+	        	<blockquote class="font-slabo">
+	        	{!! $gcg_overview['blockquote'] !!}
+	        	</blockquote>
+
+	        	<a href="{{ $gcg_overview['slug'] }}" class="arrow-cta float-right-version">
+					{{ trans('global_page.global_page_lable_link_cta') }}
+				</a>
+	        </div>
+		</div>
+	</div>
+</section>
+@endif
 @endsection
