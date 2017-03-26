@@ -147,4 +147,14 @@
 	</div>
 </section>
 @endif
+<section class="bg-gray-transparant">
+	<div class="container">
+		<div class="row">
+			<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+	            <h2 class="font-courgette">Titile</h2>
+	            <h3 class="subtitle">Subtitle</h3>
+	        </div>
+	    </div>
+	</div>
+</section>
 @endsection

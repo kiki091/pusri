@@ -23,6 +23,9 @@ mix.styles([
     'public/themes/pusri/front/css/gallery.css',
     'public/themes/pusri/front/css/news.css',
     'public/themes/pusri/front/css/font.css',
+    'public/themes/pusri/front/css/owl.carousel.css',
+    'public/themes/pusri/front/css/owl.theme.css',
+    'public/themes/pusri/front/css/icomoon.css',
 ], 'public/themes/pusri/front/build/css/plugins.css');
 
 
