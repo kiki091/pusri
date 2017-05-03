@@ -41,7 +41,6 @@
   height:100%;
 }
 .image img{
-  width:100%;
   height:100%;
 }
 
@@ -66,7 +65,7 @@
   height:150px;
   float:left;
   position:relative;
-  top:300px;
+  top:65%;
   -webkit-animation:content-s 7.5s infinite;
   -moz-animation:content-s 7.5s infinite;
   animation:content-s 7.5s infinite;

@@ -11,6 +11,18 @@
     overflow: hidden;background-color: #fff;padding: 50px 0;
 }
 
+.banner-images {
+    margin-top: 5%;background-size: cover;min-height: 300px;opacity: 0.6;
+}
+
+.img-with-opacity {
+    opacity: 0.6;
+}
+
+.margin-top {
+    margin-top: 2%;
+}
+
 .container:before {
 	display: table;content: " ";
 }

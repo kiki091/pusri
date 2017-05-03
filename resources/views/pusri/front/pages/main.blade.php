@@ -130,7 +130,7 @@
 	            </h3>
 	        </div>
 	        <div class="col-md-5 skill-bar wow slideInLeft" data-wow-delay="0.4s">
-	        	<img class="img-responsive img-rounded" src="{{ $gcg_overview['thumbnail_url'] }}">
+	        	<img class="img-responsive img-rounded img-with-opacity" src="{{ $gcg_overview['thumbnail_url'] }}">
 	        </div>
 	        <div class="col-md-7 skill-bar wow slideInRight" data-wow-delay="0.4s">
 	        	{!! $gcg_overview['description'] !!}
@@ -147,13 +147,35 @@
 	</div>
 </section>
 @endif
-<section class="bg-gray-transparant">
+<section class="banner-images" style="background:url('bin/db/images/banner/banner-career.jpg');">
+</section>
+<section id="gallery-landing-pages">
 	<div class="container">
 		<div class="row">
 			<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-	            <h2 class="font-courgette">Titile</h2>
-	            <h3 class="subtitle">Subtitle</h3>
+	            <h2 class="font-courgette">Images Gallery</h2>
+	            <div class="devider"></div>
+	            <h3 class="subtitle">
+	            	Gallery foto from our businnes and product PT. Pusri Sriwidjaja Palembang	
+	            </h3>
 	        </div>
+	        <div class="container">
+		        <div class="galleryItem margin-top wow fadeInUp" data-wow-delay="0.3s">
+		        	<img class="img-responsive" src="{{ asset('bin/db/images/default_images/thumbnail-mini.jpg') }}">
+		        </div>
+		        <div class="galleryItem margin-top wow fadeInDown" data-wow-delay="0.3s">
+		        	<img class="img-responsive" src="{{ asset('bin/db/images/default_images/thumbnail-mini.jpg') }}">
+		        </div>
+		        <div class="galleryItem margin-top wow fadeInUp" data-wow-delay="0.3s">
+		        	<img class="img-responsive" src="{{ asset('bin/db/images/default_images/thumbnail-mini.jpg') }}">
+		        </div>
+		        <div class="galleryItem margin-top wow fadeInDown" data-wow-delay="0.3s">
+		        	<img class="img-responsive" src="{{ asset('bin/db/images/default_images/thumbnail-mini.jpg') }}">
+		        </div>
+		        <div class="galleryItem margin-top wow fadeInUp" data-wow-delay="0.3s">
+		        	<img class="img-responsive" src="{{ asset('bin/db/images/default_images/thumbnail-mini.jpg') }}">
+		        </div>
+		    </div>
 	    </div>
 	</div>
 </section>

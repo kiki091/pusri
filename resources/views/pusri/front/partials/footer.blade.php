@@ -3,32 +3,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<div class="desktop-footer-block footer-block-01">
-						<h3 class="production-h3">Total Produksi</h3>
-						<div class="footer-production">
-							<span class="top">Urea</span>
-							1.671.160
-							<span class="bottom">Ton</span>
-						</div> 
-						<div class="footer-production">
-							<span class="top">Ammonia</span>
-							1.221.900
-							<span class="bottom">Ton</span>
-						</div> 
-					</div>
+					
 				</div>
 				
 				<div class="col-md-3">
-					<div class="desktop-footer-block footer-block-01">
-						<div class="footer-daily-stock">
-							<h3>Daily Stock</h3>
-							<div class="footer-daily-stock-content">
-								<div class="daily-stock-map">
-									<img class="img-responsive" src="{{ asset('bin/db/images/footer/pic_2B313F64E9C778354D5561A20FD54CD5.png') }}" />
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 
 				<div class="col-md-4 pull-right">
