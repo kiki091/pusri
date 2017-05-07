@@ -14,20 +14,24 @@
 					<div id="footer-content-js">
 						<div class="desktop-footer-block footer-block-03">
 							<div id="desktop-footer-mailing-list">
-								<h4>BERGABUNG DI MAILING LIST KAMI</h4>
+								<h4>
+                                    {{ trans('global_page.footer_title_mail') }}
+                                </h4>
 								<p>
-                                    Jadilah yang pertama untuk tahu penawaran, events, dan promosi Kami!
+                                    {{ trans('global_page.footer_desc_mail') }}
                                 </p>
                                 <form action="" id="desktop-footer-mailing-list-form" method="post">
                                 	<div class="form-group">
-                                		<input name="email" type="text" class="required only-email" placeholder="Masukan alamat email anda">
+                                		<input name="email" type="text" class="required only-email" placeholder="{{ trans('global_page.footer_placeholder_mail') }}">
                                 		<div class="form--error--message"></div>
                                 	</div>
                                 	<input type="submit" value=">">
                                 </form>
                             </div>
                             <div id="desktop-footer-social-links">
-                            	<h4>Ikuti Kami</h4>
+                            	<h4>
+                                    {{ trans('global_page.footer_title_social_media') }}
+                                </h4>
                             	<ul>
                                     <li>
                                         <a href="https://www.instagram.com/" target="_blank">
