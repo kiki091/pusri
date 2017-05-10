@@ -10,7 +10,7 @@
 					
 				</div>
 
-				<div class="col-md-4 pull-right">
+				<div class="content_footer_mailing col-md-4 pull-right">
 					<div id="footer-content-js">
 						<div class="desktop-footer-block footer-block-03">
 							<div id="desktop-footer-mailing-list">

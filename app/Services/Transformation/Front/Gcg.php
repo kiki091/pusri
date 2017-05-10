@@ -36,7 +36,7 @@ class Gcg
             $dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
             $dataTransform['slug'] = isset($data['translation']['slug']) ? $data['translation']['slug'] : '';
             $dataTransform['side_description'] = isset($data['translation']['side_description']) ? $data['translation']['side_description'] : '';
-            $dataTransform['description'] = isset($data['translation']['description']) ? substr($data['translation']['description'],0,489) : '';
+            $dataTransform['description'] = isset($data['translation']['description']) ? substr($data['translation']['description'],0,494) : '';
             $dataTransform['blockquote'] = isset($data['translation']['description']) ? substr($data['translation']['description'],489,415) : '';
             
         }else {

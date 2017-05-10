@@ -28,6 +28,7 @@ mix.styles([
     'public/themes/pusri/front/css/icomoon.css',
     'public/themes/pusri/front/css/custom-slider.css',
     'public/themes/pusri/front/css/style-slider.css',
+    'public/themes/pusri/front/css/responsives.css',
 ], 'public/themes/pusri/front/build/css/plugins.css');
 
 

@@ -30,19 +30,16 @@
 }
 .slide img{
   width:100%;
-  height:100%;
-}
-.slide img{
-  width:100%;
-  height:100%;
 }
 .image{
   width:100%;
-  height:100%;
 }
 .image img{
-  height:100%;
+  width:100%;
 }
+
+
+
 
 /* Legend */
 .legend{
@@ -60,19 +57,18 @@
   position:absolute;
   overflow:hidden;
 }
+
 .content-txt{
   width:400px;
   height:150px;
   float:left;
   position:relative;
-  top:65%;
   -webkit-animation:content-s 7.5s infinite;
   -moz-animation:content-s 7.5s infinite;
   animation:content-s 7.5s infinite;
 }
 .content-txt h1{
   font-family:Intro;
-  font-size:24px;
   color:#fff;
   text-align:left;
   margin-left:30px;
@@ -81,7 +77,6 @@
 .content-txt h2{
   font-family:Quicksand;
   font-weight:normal;
-  font-size:14px;
   font-style:italic;
   color:#fff;
   text-align:left;

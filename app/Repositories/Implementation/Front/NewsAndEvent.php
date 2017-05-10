@@ -72,8 +72,6 @@ class NewsAndEvent extends BaseImplementation implements NewsAndEventInterface
 
         if(isset($params['order_by'])) {
             $news->orderBy($params['order_by'], $orderType);
-        } else {
-            $news->orderBy('order', $orderType);
         }
 
         if(isset($params['id'])) {

@@ -130,14 +130,10 @@
 	            </h3>
 	        </div>
 	        <div class="col-md-5 skill-bar wow slideInLeft" data-wow-delay="0.4s">
-	        	<img class="img-responsive img-rounded img-with-opacity" src="{{ $gcg_overview['thumbnail_url'] }}">
+	        	<img class="content_gcg_mobile_images img-responsive img-rounded img-with-opacity" src="{{ $gcg_overview['thumbnail_url'] }}">
 	        </div>
 	        <div class="col-md-7 skill-bar wow slideInRight" data-wow-delay="0.4s">
 	        	{!! $gcg_overview['description'] !!}
-
-	        	<blockquote class="font-slabo">
-	        	{!! $gcg_overview['blockquote'] !!}
-	        	</blockquote>
 
 	        	<a href="{{ $gcg_overview['slug'] }}" class="arrow-cta float-right-version">
 					{{ trans('global_page.global_page_lable_link_cta') }}

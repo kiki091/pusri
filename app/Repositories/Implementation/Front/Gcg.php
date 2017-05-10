@@ -72,8 +72,6 @@ class Gcg extends BaseImplementation implements GcgInterface
 
         if(isset($params['order_by'])) {
             $gcg->orderBy($params['order_by'], $orderType);
-        } else {
-            $gcg->orderBy('order', $orderType);
         }
 
         if(isset($params['id'])) {
