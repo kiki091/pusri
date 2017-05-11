@@ -35,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('App\Repositories\Contracts\Front\NewsAndEvent', 'App\Repositories\Implementation\Front\NewsAndEvent');
         $this->app->bind('App\Repositories\Contracts\Front\Gcg', 'App\Repositories\Implementation\Front\Gcg');
         $this->app->bind('App\Repositories\Contracts\Front\Gp3k', 'App\Repositories\Implementation\Front\Gp3k');
+        $this->app->bind('App\Repositories\Contracts\Front\Seo', 'App\Repositories\Implementation\Front\Seo');
     }
 
     /**
@@ -53,6 +54,7 @@ class AppServiceProvider extends ServiceProvider
             'App\Repositories\Contracts\Front\NewsAndEvent',
             'App\Repositories\Contracts\Front\Gcg',
             'App\Repositories\Contracts\Front\Gp3k',
+            'App\Repositories\Contracts\Front\Seo',
 
         );
     }

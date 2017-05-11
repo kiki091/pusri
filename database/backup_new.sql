@@ -84,17 +84,12 @@ DROP TABLE IF EXISTS `company_point`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `company_point` (
-  `id` int(11) NOT NULL,
-  `title` varchar(45) DEFAULT NULL,
-  `slug` varchar(45) DEFAULT NULL,
-  `subtitle` varchar(45) DEFAULT NULL,
-  `side_description` varchar(45) DEFAULT NULL,
-  `description` varchar(45) DEFAULT NULL,
-  `created_at` varchar(45) DEFAULT NULL,
-  `created_by` varchar(45) DEFAULT NULL,
-  `updated_at` varchar(45) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +98,43 @@ CREATE TABLE `company_point` (
 
 LOCK TABLES `company_point` WRITE;
 /*!40000 ALTER TABLE `company_point` DISABLE KEYS */;
+INSERT INTO `company_point` VALUES (1,'filename.jpg',NULL,NULL);
 /*!40000 ALTER TABLE `company_point` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_point_trans`
+--
+
+DROP TABLE IF EXISTS `company_point_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_point_trans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `title` varchar(65) NOT NULL,
+  `slug` varchar(150) DEFAULT NULL,
+  `introduction` varchar(280) DEFAULT NULL,
+  `side_description` text,
+  `description` text,
+  `company_point_id` int(5) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title_UNIQUE` (`title`),
+  KEY `fk_company_point_trans_1_idx` (`company_point_id`),
+  CONSTRAINT `fk_company_point_trans_1` FOREIGN KEY (`company_point_id`) REFERENCES `company_point` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_point_trans`
+--
+
+LOCK TABLES `company_point_trans` WRITE;
+/*!40000 ALTER TABLE `company_point_trans` DISABLE KEYS */;
+INSERT INTO `company_point_trans` VALUES (2,'en','Company Values','company-values','Strength is invaluable in realizing the company\'s vision. ','Implementing company values consistently and by discipline through individual’s awareness is our invaluable values to realize the vision of company.','<h3 class=\"blue_color\">Integrity</h3>\n<p>A behavior reflecting a correspondency between mind, utterence and action. <br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Utter and Act Honestly with nothing to hide</li>\n<li>Take upon to report any fraudulence and wrongdoing based on the data and facts.</li>\n<li>Act consistently by words.</li>\n<li>Work earnestly.</li>\n<li>Work responsibly as a worship.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Commit acts that harm the company.</li>\n<li>Misuse corporate assets and authorities for personal interest.</li>\n<li>Be easily to shift ground and break own words.</li>\n<li>Take or receive gift/bribe/gratification from other parties beyond the procedures.</li>\n<li>Work lazily and at will regardless the rules and orders of superior.</li>\n</ol><br>\n<h3 class=\"blue_color\">Professional</h3>\n<p>Ready to carry out tasks in accordance with capabilities and knowledge with full of responsibility and creativity. <br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Dare to act correctly, accurately and fast in favor of the company.</li>\n<li>Carry out task thoroughly with full responsibility.</li>\n<li>Always improve competency and knowledge.</li>\n<li>Think creatively and present innovative ideas.</li>\n<li>Work effectively and efficiently to manage the time.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Be lazy and delay task accomplishment.</li>\n<li>Allow old conditions to keep going on and reluctant to produce creative new conditions.</li>\n<li>Be averse to adaptation to competency and skill in line with the advancement technology.</li>\n<li>Ignore any existing regulations and procedures.</li>\n<li>Be easily satisfied and pleased with existing achievement</li>\n</ol><br>\n<h3><span class=\"blue_color\">Focus On Consumer<br></span></h3>\n<p>Prioritizing the satisfaction and fulfillment of the needs of all customers as expected. <br><br><img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"></p>\n<ol>\n<li>Be attentive and responsive to complaints and customer needs.</li>\n<li>Reduce unnecessary bureaucracy.</li>\n<li>Swiftly provide solutions and anticipate potential issues.</li>\n<li>Maintain good relations with customer (maintaining networking).</li>\n<li>Next process is our customer.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Respond customers indifferently with no respect.</li>\n<li>Be convoluted and delay service responses.</li>\n<li>Allow customer to wait without service.</li>\n<li>Blame the customer for the complaints delivered.</li>\n<li>Ignore customer potential as business sustainability factor.</li>\n</ol><br>\n<h3 class=\"blue_color\">Loyality</h3>\n<p>Obey the rules and management, keep the harmony between employees with leadership to preserve the values and global vision. <br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Prioritize to the company interest over personal, group and class interest.</li>\n<li>Obey existing Regulations and Procedures and implement them consistently.</li>\n<li>Obey the company’s leadership and executive management line.</li>\n<li>Maintain confidentiality and company good image with full of responsibility.</li>\n<li>Revere the honor and values of the company.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Be selfish and seek advantage for personal and group interest.</li>\n<li>Disclose company’s secret.</li>\n<li>Intentionally discredit the company’s good reputation or do amoral conducts.</li>\n<li>Steal, use or destruct the company’s assets.</li>\n<li>Disperse negative issues causing conflicts in the company.</li>\n</ol>\n<h3 class=\"blue_color\">&nbsp;</h3>\n<h3 class=\"blue_color\">Good Prejudice</h3>\n<p>Always be with positive perspective in responding everything. <br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Prioritize trust principle.</li>\n<li>Willingly listen to opinion objectively and entirely.</li>\n<li>Be emphatic when interacting with others.</li>\n<li>Position ourselves to fully understand before coming to an opinion.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Easily suspect and have negative presupposition before the facts.</li>\n<li>Underestimate others for groundless assumption.</li>\n<li>Judge with no facts and do believe in one side only.</li>\n<li>Respond any things with bad prejudice and focus on negative matters.</li>\n<li>Easily give up against challenge, hard condition and changing situation.</li>\n</ol>\n<h3 class=\"blue_color\"><br><br></h3>',1,NULL,NULL),(3,'id','Tata Nilai Perusahaan','tata-nilai-perusahaan','Kekuatan tidak ternilai dalam mewujudkan Visi perusahaan.','Penerapan Tata Nilai Perusahaan secara konsisten dan disiplin melalui kesadaran masing-masing individu, adalah kekuatan tidak ternilai kami dalam mewujudkan Visi perusahaan.','<h3 class=\"blue_color\">Integritas</h3>\n<p>Perilaku yang mencerminkan kesesuaian antara pikiran, perkataan dan perbuatan.<br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Berkata dan bertindak jujur tanpa menyembunyikan fakta yang ada.</li>\n<li>Berani melaporkan kesalahan dan kecurangan yang terjadi sesuai data dan fakta yang sebenarnya.</li>\n<li>Konsisten bertindak sesuai perkataan.</li>\n<li>Bekerja dengan ikhlas.</li>\n<li>Bekerja bertanggung-jawab sebagai ibadah.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Melakukan kecurangan yang merugikan perusahaan.</li>\n<li>Menyalahgunakan aset dan kewenangan perusahaan untuk&nbsp; kepentingan pribadi.</li>\n<li>Mudah berubah pendirian dan mangkir dari perkataannya sendiri.</li>\n<li>Menerima imbalan / suap / gratifkasi dari pihak lain untuk hal&nbsp; yang menyalahi prosedur.</li>\n<li>Bekerja malas, semaunya tanpa mengindahkan peraturan dan perintah atasan.</li>\n</ol><br>\n<h3 class=\"blue_color\">Profesional</h3>\n<p>Sigap melaksanakan tugas sesuai dengan kemampuan serta pengetahuan dengan bertanggung jawab dan kreatifitas tinggi.<br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Berani bertindak secara benar, tepat dan cepat untuk kepentingan perusahaan.</li>\n<li>Melaksanakan tugas hingga tuntas dengan bertanggungjawab.</li>\n<li>Senantiasa meningkatkan kompetensi dan pengetahuan.</li>\n<li>Berpikir kreatif dan menyampaikan gagasan inovatif.</li>\n<li>Bekerja efektif dan efisien mengelola waktu.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Malas dan menunda penyelesaian tugas.</li>\n<li>Membiarkan keadaan lama berlangsung dan enggan&nbsp; menghasilkan hal baru yang kreatif.</li>\n<li>Enggan menyesuaikan diri pada kompetensi dan keahlian&nbsp; sesuai perkembangan teknologi yang berlangsung.</li>\n<li>Bekerja mengabaikan peraturan dan prosedur yang ada .</li>\n<li>Mudah puas dan nyaman dengan pencapaian yang ada.</li>\n</ol><br>\n<h3><span class=\"blue_color\">Fokus Pada Pelanggan</span></h3>\n<p>Prioritas pada kepuasan dan pemenuhan kebutuhan pelanggan internal dan eksternal sesuai harapan. <br><br><br><img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"></p>\n<ol>\n<li>Memperhatikan dan tanggap terhadap keluhan dan kebutuhan pelanggan.</li>\n<li>Memotong birokrasi yang tidak perlu.</li>\n<li>Sigap memberikan solusi dan mengantisipasi masalah yang mungkin terjadi.</li>\n<li>Memelihara hubungan baik dengan pelanggan (maintainin networking)</li>\n<li>Menjadikan proses selanjutnya sebagai pelanggan (next process is our customer)</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Acuh tak acuh tanpa respek menanggapi pelanggan.</li>\n<li>Berbelit-belit dan menunda respon pelayanan.</li>\n<li>Membiarkan pelanggan menunggu tanpa tindakan pelayanan.</li>\n<li>Menyalahkan pelanggan atas keluhan yang disampaikan.</li>\n<li>Mengabaikan potensi pelanggan sebagai faktor keberlangsungan usaha.</li>\n</ol><br>\n<h3 class=\"blue_color\">Loyalitas</h3>\n<p>Taat peraturan, patuh pada pimpinan, serta menjaga kesatuan hati antara pimpinan dengan karyawan demi melindungi nilai dan mencapai visi.<br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Mengutamakan kepentingan perusahaan diatas kepentingan pribadi, golongan dan kelompok.</li>\n<li>Taat Peraturan dan Prosedur yang ada serta konsisten&nbsp; menjalankannya.</li>\n<li>Patuh pada pimpinan dan lini manajemen eksekutif&nbsp; perusahaan.</li>\n<li>Menjaga kerahasiaan dan citra baik perusahaan dengan&nbsp; penuh tanggungjawab.</li>\n<li>Menjunjung tinggi kehormatan dan nilai-nilai perusahaan.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Mementingkan diri sendiri dan mencari keuntungan demi kepentingan pribadi dan golongan.</li>\n<li>Mengkhianati perusahaan dan pimpinan dengan tindakan yang merugikan</li>\n<li>Membocorkan rahasia perusahaan.</li>\n<li>Menjelekkan nama baik perusahaan dengan sengaja atau dengan tindakan pribadi yang melanggar moral.</li>\n<li>Mencuri, menggunakan semena-mena serta merusak aset- aset perusahaan.</li>\n<li>&nbsp;Menyebarkan isu negatif yang mengakibatkan perpecahan dalam perusahaan.</li>\n</ol>\n<h3 class=\"blue_color\">&nbsp;</h3>\n<h3 class=\"blue_color\">Baik Sangka</h3>\n<p>Selalu bersikap atau menanggapi segala hal dari perspektif positif.<br><br></p>\n<img src=\"http://www.pusri.co.id/css/img/uploaded/check.png\" alt=\"\" width=\"35\" height=\"33\"><br><ol>\n<li>Mengedepankan asas percaya.</li>\n<li>Bersedia mendengarkan pendapat dengan obyektif dan sepenuhnya.</li>\n<li>Memiliki empati saat berinteraksi dengan orang lain.</li>\n<li>Menempatkan diri untuk memahami secara utuh sebelum menyimpulkan pendapat.</li>\n</ol><br><img src=\"http://www.pusri.co.id/css/img/uploaded/cross.png\" alt=\"\" width=\"36\" height=\"33\"><br><ol>\n<li>Mudah curiga dan berprasangka negatif sebelum menerima informasi lengkap.</li>\n<li>Memandang rendah orang lain karena asumsi yang tidak berdasar.</li>\n<li>Menghakimi tanpa kejelasan fakta dan percaya sepihak saja.</li>\n<li>Merespon segala sesuatu dengan prasangka buruk serta berpusat pada hal-hal negatif saja.</li>\n<li>Mudah menyerah pada tantangan, keadaan sulit dan kondisi yang berubah.</li>\n</ol>\n<h3 class=\"blue_color\"><br><br></h3>',1,NULL,NULL);
+/*!40000 ALTER TABLE `company_point_trans` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -530,6 +561,65 @@ INSERT INTO `news_and_event_trans` VALUES (1,'en','Pt Pusri implementing packing
 UNLOCK TABLES;
 
 --
+-- Table structure for table `seo`
+--
+
+DROP TABLE IF EXISTS `seo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(45) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seo`
+--
+
+LOCK TABLES `seo` WRITE;
+/*!40000 ALTER TABLE `seo` DISABLE KEYS */;
+INSERT INTO `seo` VALUES (1,'seo:landing',NULL,NULL);
+/*!40000 ALTER TABLE `seo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seo_trans`
+--
+
+DROP TABLE IF EXISTS `seo_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seo_trans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `h1` varchar(100) DEFAULT NULL,
+  `meta_keyword` text,
+  `meta_title` varchar(100) DEFAULT NULL,
+  `meta_description` text,
+  `seo_id` int(5) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_seo_trans_1_idx` (`seo_id`),
+  CONSTRAINT `fk_seo_trans_1` FOREIGN KEY (`seo_id`) REFERENCES `seo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seo_trans`
+--
+
+LOCK TABLES `seo_trans` WRITE;
+/*!40000 ALTER TABLE `seo_trans` DISABLE KEYS */;
+INSERT INTO `seo_trans` VALUES (1,'en',NULL,'Fertilizer, Urea, fertilizer subsidies, fertilizer Unsubsidized, Ammonia','PT Pupuk Sriwidjaja Palembang (Pusri)','PT Pupuk Sriwidjaja Palembang (Pusri) is a State Owned Enterprise which was established as a pioneer manufacturer of urea fertilizer in Indonesia',1,NULL,NULL),(2,'id',NULL,'Pupuk, Urea, Pupuk Subsidi, Pupuk Non Subsidi, Amoniak','PT Pupuk Sriwidjaja Palembang (Pusri)','PT Pupuk Sriwidjaja Palembang (Pusri) adalah Badan Usaha Milik Negara yang didirikan sebagai pelopor produsen pupuk urea di Indonesia',1,NULL,NULL);
+/*!40000 ALTER TABLE `seo_trans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sub_menu`
 --
 
@@ -717,4 +807,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-11 22:58:01
+-- Dump completed on 2017-05-12  0:18:04

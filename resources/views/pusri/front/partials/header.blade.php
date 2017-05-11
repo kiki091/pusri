@@ -1,8 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pt Pupuk Sriwidjaja Palembang (pusri)">
 <meta name="author" content="PT. Asia Resource System">
-<title>PT Pupuk Sriwidjaja Palembang (Pusri) | Home</title>
+<title>{{ $seo['meta_title'] or 'PT Pupuk Sriwidjaja Palembang (Pusri)' }}</title>
 <meta name="author" content="PT Pupuk Sriwidjaja Palembang (Pusri)" />
 <meta name="publisher" content="www.pusri.co.id" />
 <meta name="copyright" content="www.pusri.co.id" />
@@ -16,6 +15,9 @@
 <meta Http-Equiv="Cache-Control" Content="no-cache">
 <meta Http-Equiv="Pragma" Content="no-cache">
 <meta Http-Equiv="Expires" Content="0">
+
+<meta content="{{ $seo['meta_description'] }}" name="description">
+<meta content="{{ $seo['meta_keyword'] }}" name="keywords">
 
 <link rel="icon" href="{{ asset('themes/pusri/front/images/favicon.ico') }}"> 
 
