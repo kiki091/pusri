@@ -77,6 +77,67 @@ INSERT INTO `category_trans` VALUES (1,'id','Perusahaan','peusahaan',1,NULL,NULL
 UNLOCK TABLES;
 
 --
+-- Table structure for table `company_certification`
+--
+
+DROP TABLE IF EXISTS `company_certification`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_certification` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(45) DEFAULT NULL,
+  `order` varchar(45) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `category_id` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_company_certification_1_idx` (`category_id`),
+  CONSTRAINT `fk_company_certification_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_certification`
+--
+
+LOCK TABLES `company_certification` WRITE;
+/*!40000 ALTER TABLE `company_certification` DISABLE KEYS */;
+INSERT INTO `company_certification` VALUES (1,'filename.jpg','1',NULL,NULL,1);
+/*!40000 ALTER TABLE `company_certification` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_certification_trans`
+--
+
+DROP TABLE IF EXISTS `company_certification_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_certification_trans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `information` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `company_certification_id` int(3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_company_certification_trans_1_idx` (`company_certification_id`),
+  CONSTRAINT `fk_company_certification_trans_1` FOREIGN KEY (`company_certification_id`) REFERENCES `company_certification` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_certification_trans`
+--
+
+LOCK TABLES `company_certification_trans` WRITE;
+/*!40000 ALTER TABLE `company_certification_trans` DISABLE KEYS */;
+INSERT INTO `company_certification_trans` VALUES (1,'en','Green Proper Charter',NULL,NULL,NULL,1),(2,'id','Piagam Proper Hijau',NULL,NULL,NULL,1);
+/*!40000 ALTER TABLE `company_certification_trans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `company_identity`
 --
 
@@ -89,7 +150,9 @@ CREATE TABLE `company_identity` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `category_id` int(5) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_company_identity_1_idx` (`category_id`),
+  CONSTRAINT `fk_company_identity_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -153,7 +216,9 @@ CREATE TABLE `company_management` (
   `category_id` int(5) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_company_management_1_idx` (`category_id`),
+  CONSTRAINT `fk_company_management_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -212,7 +277,9 @@ CREATE TABLE `company_point` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `category_id` int(5) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_company_point_1_idx` (`category_id`),
+  CONSTRAINT `fk_company_point_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -275,7 +342,9 @@ CREATE TABLE `company_profile` (
   `created_by` int(1) DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `category_id` int(5) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_company_profile_1_idx` (`category_id`),
+  CONSTRAINT `fk_company_profile_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -932,4 +1001,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-12  0:50:49
+-- Dump completed on 2017-05-12  1:05:47
