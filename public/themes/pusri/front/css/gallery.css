@@ -1,5 +1,50 @@
 /* Gallery Style Landing Page */
+#group-landing-gallery-section {
+    overflow: hidden;
+}
+#group-landing-gallery-item-container, #group-landing-gallery-item-container-02 {
+	font-size: 0;
+    height: 215.333px;
+    overflow: hidden;
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.group-landing-gallery-item {
+	display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    position: relative;
+    width: 16.666%;
+    height: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 6px;
+}
+.group-landing-gallery-item .gallery-image-container {
+	overflow: hidden;
+    position: relative;
+    height: 100%;
+    background: #d7d7d7;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    height: 150px;
+}
 
+.gallery-image-container.image-loaded-version img {
+	opacity: 1;
+	display: block;
+    position: absolute;
+    top: -55px;
+    left: -55px;
+    width: 320px;
+    height: 320px;
+    -webkit-transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
+    -moz-transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
+    -o-transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
+    transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
+}
 .galleryItem {
     color: #797478;
     font: 10px/1.5 Verdana, Helvetica, sans-serif;

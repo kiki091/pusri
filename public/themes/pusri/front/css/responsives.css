@@ -1,7 +1,18 @@
+@media (min-width: 1200px) {
+	#slider {
+    	height: 530px;
+  	}
+}
 @media (min-width: 1025px) {
+	.news_landing_grid {
+		padding: 45px;
+	}
 	.news_landing_grid h2 {
-        font-size: 34px;
-        line-height: 42px;
+        font-size: 22px;
+        line-height: 40px;
+    }
+    .news_landing_grid p {
+    	font-size: 16px;
     }
     .content-txt{
 	    top:65%;

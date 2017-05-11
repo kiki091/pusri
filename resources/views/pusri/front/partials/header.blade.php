@@ -17,6 +17,8 @@
 <meta Http-Equiv="Pragma" Content="no-cache">
 <meta Http-Equiv="Expires" Content="0">
 
+<link rel="icon" href="{{ asset('themes/pusri/front/images/favicon.ico') }}"> 
+
 <link href="https://fonts.googleapis.com/css?family=Courgette|Handlee|Philosopher|Slabo+27px|Delius+Unicase" rel="stylesheet">
 <link href="{{ asset('themes/pusri/front/css/font-awesome.css') }}" rel="stylesheet">
 <link href="{{ asset('themes/pusri/front/build/css/plugins.css') }}" rel="stylesheet">

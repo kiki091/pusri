@@ -512,9 +512,3 @@ jQuery(document).ready(function() {
 	});
 });
 
-
-
-
-
-
-
