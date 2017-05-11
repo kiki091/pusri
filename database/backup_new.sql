@@ -77,6 +77,129 @@ INSERT INTO `category_trans` VALUES (1,'id','Perusahaan','peusahaan',1,NULL,NULL
 UNLOCK TABLES;
 
 --
+-- Table structure for table `company_identity`
+--
+
+DROP TABLE IF EXISTS `company_identity`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_identity` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `category_id` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_identity`
+--
+
+LOCK TABLES `company_identity` WRITE;
+/*!40000 ALTER TABLE `company_identity` DISABLE KEYS */;
+INSERT INTO `company_identity` VALUES (1,'filename.jpg',NULL,NULL,1);
+/*!40000 ALTER TABLE `company_identity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_identity_trans`
+--
+
+DROP TABLE IF EXISTS `company_identity_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_identity_trans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `title` varchar(65) DEFAULT NULL,
+  `slug` varchar(150) NOT NULL,
+  `introduction` varchar(280) DEFAULT NULL,
+  `side_description` text,
+  `description` longtext,
+  `company_identity_id` int(5) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_UNIQUE` (`slug`),
+  KEY `fk_company_identity_trans_1_idx` (`company_identity_id`),
+  CONSTRAINT `fk_company_identity_trans_1` FOREIGN KEY (`company_identity_id`) REFERENCES `company_identity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_identity_trans`
+--
+
+LOCK TABLES `company_identity_trans` WRITE;
+/*!40000 ALTER TABLE `company_identity_trans` DISABLE KEYS */;
+INSERT INTO `company_identity_trans` VALUES (1,'en','Corporate Identity Overview','corporate-identity-overview','It is essential for a company to stay consistent, particularly for its identity in any communication forms.','A corporate identity is all representations or visual and physical media manifestation displaying a corporate identity, so the company is distinguishable from other companies.','<p><span class=\"first-letter\">I</span>n Public Relations, the relation of Corporate Identity is described in corporate identity dynamics stated by Hacth and Schultz. The dynamics model states that corporate identity has a close relation with the corporate culture and corporate image. Internally, corporate identity is associated to culture / adopted by the company. Yet externally, corporate identity has a close relation with corporate image. Currently, corporate identity has been recognized as a strategic resource and a source of competitive advantage. </p><p>PT Pupuk Sriwidjaja Palembang is renowned as a company that has been socialized and recognized with a unique logo and name. Yet, PT Pupuk Sriwidjaja Palembang’s logo and name is sometimes applied in various shape and colors.</p><p>That is the reason why PT Pupuk Sriwidjaja Palembang (or abbreviated as PT Pusri Palembang) has set a fixed standard logo and company’s name, so all PT Pusri Palembang stakeholders who are about to use its logo and PT Pusri Palembang name on its communication to PT Pusri Palembang both formal and informally must use the standard we set. It is to make a consistency and uniformity.</p><p>Perceptual uniformity in the application of logos, colors, and consistent typography is essential to maintain a strong brand in the market. And the most important of all is the unity of the spirit of all related parties both inside and outside PT Pusri Palembang to achieve the common goal of making PT Pusri Palembang a big company that plays an active role in creating a food prosperous and the self-sufficient Indonesia. </p>',1,NULL,NULL),(2,'id','Sekilas Identitas Perusahaan','sekilas-identitas-perusahaan','Dalam bentuk komunikasi apapun, sangat penting bagi sebuah Perusahaan untuk menjaga konsistensinya, salah satunya adalah konsistensi terhadap identitasnya.','Identitas perusahaan atau jati diri perusahaan (corporate identity) adalah semua perwakilan atau perwujudan media visual dan fisik yang menampilkan suatu jati diri Perusahaan sehingga dapat membedakan perusahaan tersebut dengan Perusahaan lainnya. ','<p><span class=\"first-letter\">D</span>alam bidang public relations, relasi identitas Perusahaan dijelaskan dalam bentuk model dinamika identitas Perusahaan yang dikemukakan oleh Hacth and Schultz . Model dinamika tersebut menyebutkan bahwa identitas Perusahaan memiliki relasi dengan budaya perusahaan (corporate culture) dan citra perusahaan (corporate image). Secara internal, identitas Perusahaan terkait dengan kultur / budaya yang dianut oleh Perusahaan. Namun, secara eksternal, identitas Perusahaan memiliki keterkaitan dengan citra perusahaan. Saat ini, identitas Perusahaan telah diakui sebagai sumber daya yang strategis dan sumber keunggulan yang kompetitif.</p><p>PT Pupuk Sriwidjaja Palembang sebagai sebuah Perusahaan yang sudah berdiri dan bersosialisasi dengan masyarakat telah dikenal dengan logo dan namanya yang khas. Namun dalam aplikasinya logo dan nama PT Pupuk Sriwidjaja Palembang\nterkadang digunakan dengan banyak variasi bentuk dan warna.</p><p>Untuk itulah kini PT Pupuk Sriwidjaja Palembang (atau disingkat PT Pusri Palembang) telah menetapkan standar logo dan nama perusahaan sehingga semua stakeholders PT Pusri Palembang yang ingin menggunakan logo dan nama PT Pusri Palembang dalam komunikasinya baik secara formal maupun informal dengan PT Pusri Palembang diharapkan untuk memakai standar yang sama, untuk konsistensi dan keseragaman.</p><p>Keseragaman persepsi dalam penerapan logo, warna, dan tipografi yang konsisten sangatlah penting jika ingin menjaga kehadiran brand yang kuat di pasaran. Dan yang paling penting adalah kesatuan semangat semua pihak yang berkepentingan baik di dalam maupun di luar lingkungan PT Pusri Palembang untuk mencapai tujuan bersama yaitu menjadikan PT Pusri Palembang menjadi perusahaan besar yang berperan aktif dalam mewujudkan Indonesia yang makmur dan berswasembada pangan.</p>',1,NULL,NULL);
+/*!40000 ALTER TABLE `company_identity_trans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_management`
+--
+
+DROP TABLE IF EXISTS `company_management`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_management` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `foto_images` varchar(150) DEFAULT NULL,
+  `order` int(2) DEFAULT NULL,
+  `is_active` varchar(45) DEFAULT NULL,
+  `category_id` int(5) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_management`
+--
+
+LOCK TABLES `company_management` WRITE;
+/*!40000 ALTER TABLE `company_management` DISABLE KEYS */;
+INSERT INTO `company_management` VALUES (1,'foto.jpg',1,'1',1,NULL,NULL);
+/*!40000 ALTER TABLE `company_management` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_management_trans`
+--
+
+DROP TABLE IF EXISTS `company_management_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_management_trans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `title` varchar(45) DEFAULT NULL,
+  `fullname` varchar(150) DEFAULT NULL,
+  `history` text,
+  `company_management_id` int(5) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_company_management_trans_1_idx` (`company_management_id`),
+  CONSTRAINT `fk_company_management_trans_1` FOREIGN KEY (`company_management_id`) REFERENCES `company_management` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_management_trans`
+--
+
+LOCK TABLES `company_management_trans` WRITE;
+/*!40000 ALTER TABLE `company_management_trans` DISABLE KEYS */;
+INSERT INTO `company_management_trans` VALUES (1,'en','Commissioner','Achmad Tossin Sutawikara, SE, MM','Achmad Tossin Sutawikara born in Bandung on May 1, 1958 , obtained his degree as Bachelor of Economics majoring in Accounting from the University of Padjadjaran Bandung in 1983 and obtained his Master degree in Marketing Management in 1994. And then he joined PT Pupuk Kujang as the staff of the Bureau of Finance in 1983 , then received several positions.  He has served a position as Head of Compartment Administration and Finance in 2001 , and as Financial Director in 2004 - 2010. He also has served as President Director since November 12, 2010. He has served as a Commissioner of PT Pupuk Sriwidjaja Palembang on  September 3, 2012 to January 2016 , due to his appointment as Director of Human Resources & Governance of  PT Pupuk Indonesia ( Persero ) . Then on April 20, 2016 formally served as a Commissioner of PT Pusri Palembang',1,NULL,NULL),(2,'id','Komisaris','Achmad Tossin Sutawikara, SE, MM','Achmad Tossin Sutawikara Lahir di Bandung tanggal 1 Mei 1958, memperoleh gelar Sarjana Ekonomi jurusan Akuntansi dari Universitas Padjajaran Bandung tahun 1983 dan gelar Magister Manajemen Pemasaran tahun 1994. Bergabung dengan PT Pupuk Kujang sebagai staf di Biro Keuangan pada tahun 1983, kemudian menjabat di beberapa posisi. Pernah menjabat sebagai Kepala Kompartemen Administrasi dan Keuangan tahun 2001, sebagai Direktur Keuangan pada 2004 - 2010. Menjabat sebagai Direktur Utama sejak 12\nNovember 2010. Menjabat sebagai Komisaris PT Pupuk Sriwidjaja Palembang pada 3 September 2012 hingga Januari 2016, seiring dengan penunjukannya sebagai Direktur SDM &  Tata Kelola PT Pupuk Indonesia (Persero). Kemudian pada tanggal 20 April 2016 resmi menjabat sebagai Komisaris Utama PT Pusri Palembang.',1,NULL,NULL);
+/*!40000 ALTER TABLE `company_management_trans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `company_point`
 --
 
@@ -88,6 +211,7 @@ CREATE TABLE `company_point` (
   `filename` varchar(100) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
+  `category_id` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -98,7 +222,7 @@ CREATE TABLE `company_point` (
 
 LOCK TABLES `company_point` WRITE;
 /*!40000 ALTER TABLE `company_point` DISABLE KEYS */;
-INSERT INTO `company_point` VALUES (1,'filename.jpg',NULL,NULL);
+INSERT INTO `company_point` VALUES (1,'filename.jpg',NULL,NULL,1);
 /*!40000 ALTER TABLE `company_point` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,6 +274,7 @@ CREATE TABLE `company_profile` (
   `created_at` timestamp NULL DEFAULT NULL,
   `created_by` int(1) DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
+  `category_id` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -160,7 +285,7 @@ CREATE TABLE `company_profile` (
 
 LOCK TABLES `company_profile` WRITE;
 /*!40000 ALTER TABLE `company_profile` DISABLE KEYS */;
-INSERT INTO `company_profile` VALUES (1,1,NULL,1,NULL);
+INSERT INTO `company_profile` VALUES (1,1,NULL,1,NULL,1);
 /*!40000 ALTER TABLE `company_profile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -807,4 +932,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-12  0:18:04
+-- Dump completed on 2017-05-12  0:50:49
