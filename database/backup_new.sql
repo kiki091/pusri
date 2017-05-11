@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.13, for linux-glibc2.5 (x86_64)
 --
--- Host: 127.0.0.1    Database: pusri_db
+-- Host: localhost    Database: pusri_db
 -- ------------------------------------------------------
--- Server version	5.7.17-0ubuntu0.16.04.2
+-- Server version	5.7.18-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -237,6 +237,105 @@ LOCK TABLES `gcg_trans` WRITE;
 /*!40000 ALTER TABLE `gcg_trans` DISABLE KEYS */;
 INSERT INTO `gcg_trans` VALUES (1,'en','GCG Overview','good-corporate-governance-overview','The implementation of Good Corporate Governance (GCG) is an obligation and important basis to achieve the realization of vision and mission and the company business continuation. ','<p><span class=\"first-letter\">P</span>T Pusri Palembang, starts of the operational employee, manager, and general manager, head of SPI, company secretary up to the Director and Commissioner, really aware it.</p><p>PT Pusri Palembang always fulfills GCG rules and principles issued by Government Cq ministry of SOE. It is carried out well by the management by following up Minister of SOE Master Plan 1998 which positioned GCG as one of eight pillars of SOE to reach world standard company.</p><p>The management has also fulfilled its obligation of SOE Reformation Master Plan in May, 2010 about the policy of GCG implementation in SOE in the form of President Director Letter No. 1387/100.0T/2000, on December 19, 2000, about the policy of GCG implementation in all company scopes. The letter is also equipped by forming PUSRI GCG Implementation Team pursuant to the decree of the Board of directors.</p><p>The decree of Minister of SOE No. Kep.-117/MMBU/2002, August 1, 2002, about the implementation of GCG practices has also been PUSRI’s strong basis to keep improving the management to achieve sustainable GCG implementation.</p><p>And currently has been renewed by Ministry of SOE rules Kep.-117/MMBU/2002, August 1, 2011, about a Good Corporate Governance Implementation</p>','PT Pupuk Sriwidjaja Palembang (Pusri)','Fertilizer, Urea, fertilizer subsidies, fertilizer Unsubsidized, Ammonia','PT Pupuk Sriwidjaja Palembang (Pusri) is a State Owned Enterprise which was established as a pioneer manufacturer of urea fertilizer in Indonesia',1,NULL,NULL),(2,'id','Sekilas GCG','sekilas-good-corporate-governance','Penerapan tata kelola perusahaan yang baik Good Corporate Governance (GCG) merupakan keharusan dan landasan penting bagi keberhasilan mewujudkan visi dan misi serta kelangsungan usaha perusahaan. ','<p><span class=\"first-letter\">H</span>al itu sangat disadari oleh seluruh jajaran manajemen PT Pusri Palembang mulai dari Karyawan Pelaksana, Manajer, General Manager, Kepala SPI, Sekretaris Perusahaan hingga Direksi dan Komisaris, sebagaimana tercermin dalam setiap Laporan Tahunan Perusahaan dari tahun ke tahun. </p><p>PT Pusri Palembang senantiasa memenuhi kaidah-kaidah serta aturan GCG yang ditetapkan oleh Pemerintah Cq Kementerian BUMN. Hal itu dilaksanakan dengan baik oleh manajemen dengan menindaklanjuti Master Plan Meneg BUMN tahun 1998 yang meletakkan GCG sebagai salah satu dari delapan pondasi BUMN untuk menuju perusahaan berstandar dunia.</p><p>Manajemen juga telah memenuhi kewajiban sebagaimana dituangkan dalam Master Plan Reformasi BUMN bulan Mei tahun 2000 tentang kebijakan penerapan GCG di BUMN. Bentuknya berupa Surat Direktur Utama No. 1387/100.0T/2000, tanggal 19 Desember 2000, tentang kebijakan penerapan GCG di seluruh lingkup kerja perusahaan. Surat tersebut juga dilengkapi dengan dibentuknya Tim Penerapan GCG PUSRI melalui Surat Keputusan Direksi tanggal 31 Januari 2001. </p><p>Keputusan Menteri BUMN No. Kep.-117/MMBU/2002, tanggal 1 Agustus 2002, tentang penerapan praktek GCG, juga telah menjadi landasan kuat PUSRI untuk membenahi terus manajemen menuju penerapan GCG yang berkelanjutan, sekaligus merupakan payung hukum bagi penerapan GCG oleh perusahaan.</p><p>Dan kini telah diperbarui dengan Peraturan Menteri BUMN No. PER-01/MBU/2011 tanggal 1 Agustus 2011 tentang Penerapan Tata Kelola Perusahaan Yang Baik.<p>','PT Pupuk Sriwidjaja Palembang (Pusri)','Pupuk, Urea, Pupuk Subsidi, Pupuk Non Subsidi, Amoniak','PT Pupuk Sriwidjaja Palembang (Pusri) adalah Badan Usaha Milik Negara yang didirikan sebagai pelopor produsen pupuk urea di Indonesia',1,NULL,NULL);
 /*!40000 ALTER TABLE `gcg_trans` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gp3k`
+--
+
+DROP TABLE IF EXISTS `gp3k`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gp3k` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `thumbnail` varchar(200) DEFAULT NULL,
+  `filename` varchar(200) DEFAULT NULL,
+  `order` int(2) DEFAULT NULL,
+  `is_active` int(1) DEFAULT NULL,
+  `is_landing` int(1) DEFAULT NULL,
+  `tag_id` int(5) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gp3k`
+--
+
+LOCK TABLES `gp3k` WRITE;
+/*!40000 ALTER TABLE `gp3k` DISABLE KEYS */;
+INSERT INTO `gp3k` VALUES (1,'thumbnail.jpg','filename.jpg',1,1,1,4,NULL,NULL);
+/*!40000 ALTER TABLE `gp3k` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gp3k_report`
+--
+
+DROP TABLE IF EXISTS `gp3k_report`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gp3k_report` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `years` int(4) DEFAULT NULL,
+  `table_report` text,
+  `description` text,
+  `tag_id` int(5) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_gp3k_report_1_idx` (`tag_id`),
+  CONSTRAINT `fk_gp3k_report_1` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gp3k_report`
+--
+
+LOCK TABLES `gp3k_report` WRITE;
+/*!40000 ALTER TABLE `gp3k_report` DISABLE KEYS */;
+INSERT INTO `gp3k_report` VALUES (1,'en',2011,'<table class=\"res-table table_keuangan\" cellspacing=\"1\" cellpadding=\"0\">\n<tbody>\n<tr class=\"title_table\">\n<td colspan=\"6\"><strong>GP3K</strong> <br>PT Pupuk Sriwidjaja Palembang 2011 Year<br> <strong>(unit:Ha)</strong></td>\n</tr>\n<tr><th>Number</th><th>Province</th><th>Program of Cultivation 2011</th><th>Relation Cultivation 2011 ( Juli - Des )</th><th>Relation Harvest (Juli-Des) 2011</th><th>Carry Over ( CO ) Harvest at MT I 2012 year</th></tr>\n<tr>\n<td>1</td>\n<td>Sumsel</td>\n<td>15.000</td>\n<td>12.942</td>\n<td>7.741 *)</td>\n<td>5.201</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Lampung</td>\n<td>6.000</td>\n<td>938</td>\n<td>938</td>\n<td>0</td>\n</tr>\n<tr class=\"total\">\n<td colspan=\"2\">Total</td>\n<td>21.000</td>\n<td>13.880</td>\n<td>8.679</td>\n<td>5.201</td>\n</tr>\n</tbody>\n</table>',NULL,5,NULL,NULL),(2,'id',2011,'<table class=\"res-table table_keuangan\" cellspacing=\"1\" cellpadding=\"0\">\n<tbody>\n<tr class=\"title_table\">\n<td colspan=\"6\"><strong>GP3K</strong> <br>PT Pupuk Sriwidjaja Palembang Tahun 2011<br> <strong>(satuan:Ha)</strong></td>\n</tr>\n<tr><th>No</th><th>Propinsi</th><th>Rencana Tanam 2011</th><th>Realisasi Tanam 2011 ( Juli - Des )</th><th>Realisasi Panen (Juli-Des) 2011</th><th>Carry Over ( CO ) Panen ke MT I Thn 2012</th></tr>\n<tr>\n<td>1</td>\n<td>Sumsel</td>\n<td>15.000</td>\n<td>12.942</td>\n<td>7.741 *)</td>\n<td>5.201</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Lampung</td>\n<td>6.000</td>\n<td>938</td>\n<td>938</td>\n<td>0</td>\n</tr>\n<tr class=\"total\">\n<td colspan=\"2\">Jumlah</td>\n<td>21.000</td>\n<td>13.880</td>\n<td>8.679</td>\n<td>5.201</td>\n</tr>\n</tbody>\n</table>',NULL,5,NULL,NULL);
+/*!40000 ALTER TABLE `gp3k_report` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gp3k_trans`
+--
+
+DROP TABLE IF EXISTS `gp3k_trans`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `gp3k_trans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locale` varchar(2) DEFAULT NULL,
+  `title` varchar(150) DEFAULT NULL,
+  `slug` varchar(200) NOT NULL,
+  `description` text,
+  `meta_title` varchar(200) DEFAULT NULL,
+  `meta_keyword` varchar(100) DEFAULT NULL,
+  `meta_description` text,
+  `gp3k_id` int(10) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `slug_UNIQUE` (`slug`),
+  KEY `fk_gp3k_trans_1_idx` (`gp3k_id`),
+  CONSTRAINT `fk_gp3k_trans_1` FOREIGN KEY (`gp3k_id`) REFERENCES `gp3k` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gp3k_trans`
+--
+
+LOCK TABLES `gp3k_trans` WRITE;
+/*!40000 ALTER TABLE `gp3k_trans` DISABLE KEYS */;
+INSERT INTO `gp3k_trans` VALUES (1,'en','GP3K Overview','gp3k-overview','<p><span class=\"first-letter\">G</span>P3K is a form of BUMN support in the framework of national food security program with a national rice surplus target of 10 million tons in the period 2011-2015. In line with Presidential Instruction No. 5 years 2011: State-Owned Enterprises play an active role in maintaining food security, therefore the GP3K Program (Corporate Based Food Production Improvement Program) is launched by the Ministry of State-Owned Enterprises as one of the government\'s efforts to help realize the achievement of the national food surplus.</p><p>As the oldest fertilizer company in Indonesia, PT PUSRI has made a major contribution in the development of national agriculture. In line with the agricultural intensification program launched by the government in order to achieve food self-sufficiency, especially rice, the role of PUSRI as a fertilizer producer is more strategic.</p><p>In achieving these targets, in addition to increasing the efficiency of production costs so that the cost of fertilizer can be reduced as efficiently as possible, PT PUSRI also streamline the system of distribution of fertilizer to farmers with the principle of 6 precisely, namely; On time, type, dose, quantity, price and place.</p><p>Surplus of 10 million tons of rice in 2014 is a program that must be done with hard work and with a special method, for the government to implement GP3K and PT PUSRI become one of the operators who implement GP3K in 8 regions; South Sumatra, Lampung, Central Java, Banten, Bengkulu, Bangka Belitung, Jambi and Yogyakarta.</p><p>The steps of PT PUSRI to meet the target are 9 main programs of GP3K PUSRI which include:</p>','GP3K Overview','Fertilizer, Urea, Subsidized Fertilizer, Non Subsidized Fertilizer, Ammonia','PT Pupuk Sriwidjaja Palembang (Pusri) is a State Owned Enterprise established as a pioneer of urea fertilizer producer in Indonesia',1,NULL,NULL),(2,'id','Sekilas GP3K','sekilas-gp3k','<p><span class=\"first-letter\">G</span>P3K merupakan bentuk dukungan BUMN dalam rangka program ketahanan pangan nasional dengan target surplus beras nasional 10 juta ton dalam kurun waktu 2011-2015. Sejalan dengan Inpres No. 5 thn 2011: BUMN ikut berperan aktif dalam menjaga ketahanan pangan, oleh karena itu dicanangkanlah Program GP3K (Gerakan Peningkatan Produksi Pangan Berbasis Korporasi) oleh Kementrian Negara BUMN sebagai salah satu usaha pemerintah untuk membantu mewujudkan pencapaian surplus pangan nasional tersebut.</p><p>Sebagai perusahaan pupuk tertua di Indonesia, PT PUSRI telah memberikan kontribusi besar dalam pembangunan pertanian nasional. Sejalan dengan program intensifikasi pertanian yang dicanangkan pemerintah dalam rangka mencapai swasembada pangan, khususnya padi, maka peranan PUSRI sebagai produsen pupuk semakin strategis.</p><p>Dalam mencapai sasaran tersebut, selain meningkatkan efisiensi biaya produksi sehingga biaya pupuk dapat ditekan seefisien mungkin, PT PUSRI juga mengefektifkan sistim pendistribusian pupuk ke petani dengan prinsip 6 tepat, yaitu; tepat waktu, jenis, dosis, jumlah, harga dan tempat.</p><p>Surplus 10 juta ton beras pada tahun 2014 merupakan program yang harus dilakukan dengan kerja keras dan dengan metode khusus, untuk itu pemerintah melaksanakan GP3K dan PT PUSRI menjadi salah satu operator yang melaksanakan GP3K di 8 wilayah yaitu; Sumatera Selatan, Lampung, Jawa Tengah, Banten, Bengkulu, Bangka Belitung, Jambi dan DIY.</p><p>Langkah-langkah PT PUSRI untuk memenuhi sasaran tersebut berupa 9 program utama GP3K PUSRI yang meliputi:</p>\n','Sekilas GP3K','Pupuk, Urea, Pupuk Subsidi, Pupuk Non Subsidi, Amoniak','PT Pupuk Sriwidjaja Palembang (Pusri) adalah Badan Usaha Milik Negara yang didirikan sebagai pelopor produsen pupuk urea di Indonesia',1,NULL,NULL);
+/*!40000 ALTER TABLE `gp3k_trans` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -506,7 +605,7 @@ CREATE TABLE `tag` (
   PRIMARY KEY (`id`),
   KEY `fk_tag_1_idx` (`category_id`),
   CONSTRAINT `fk_tag_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -515,7 +614,7 @@ CREATE TABLE `tag` (
 
 LOCK TABLES `tag` WRITE;
 /*!40000 ALTER TABLE `tag` DISABLE KEYS */;
-INSERT INTO `tag` VALUES (1,1,1,7,NULL,NULL),(2,2,1,7,NULL,NULL),(3,3,1,5,NULL,NULL);
+INSERT INTO `tag` VALUES (1,1,1,7,NULL,NULL),(2,2,1,7,NULL,NULL),(3,3,1,5,NULL,NULL),(4,4,1,1,NULL,NULL),(5,5,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `tag` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -538,7 +637,7 @@ CREATE TABLE `tag_trans` (
   UNIQUE KEY `slug_UNIQUE` (`slug`),
   KEY `fk_tag_trans_1_idx` (`tag_id`),
   CONSTRAINT `fk_tag_trans_1` FOREIGN KEY (`tag_id`) REFERENCES `tag_trans` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -547,7 +646,7 @@ CREATE TABLE `tag_trans` (
 
 LOCK TABLES `tag_trans` WRITE;
 /*!40000 ALTER TABLE `tag_trans` DISABLE KEYS */;
-INSERT INTO `tag_trans` VALUES (1,'en','Latest News','latest-news',1,NULL,NULL),(2,'id','Berita Terkini','berita-terkini',1,NULL,NULL),(3,'en','Mass Media','mass-media',2,NULL,NULL),(4,'id','Media Massa','media-massa',2,NULL,NULL),(5,'en','Good Corporate Governance Overview','good-corporate-governance-overview',3,NULL,NULL),(6,'id','Sekilas Good Corporate Governance','sekilas-good-corporate-governance',3,NULL,NULL);
+INSERT INTO `tag_trans` VALUES (1,'en','Latest News','latest-news',1,NULL,NULL),(2,'id','Berita Terkini','berita-terkini',1,NULL,NULL),(3,'en','Mass Media','mass-media',2,NULL,NULL),(4,'id','Media Massa','media-massa',2,NULL,NULL),(5,'en','Good Corporate Governance Overview','good-corporate-governance-overview',3,NULL,NULL),(6,'id','Sekilas Good Corporate Governance','sekilas-good-corporate-governance',3,NULL,NULL),(7,'en','GP3k Overview','gp3k-overview',4,NULL,NULL),(8,'id','Sekilas GP3K','sekilas-gp3k',4,NULL,NULL),(9,'en','GP3k Progress Report','gp3k-progress-report',5,NULL,NULL),(10,'id','Laporan Perkembangan GP3K','laporan-perkembangan-gp3k',5,NULL,NULL);
 /*!40000 ALTER TABLE `tag_trans` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -618,4 +717,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-02 23:14:13
+-- Dump completed on 2017-05-11 22:58:01

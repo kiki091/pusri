@@ -206,39 +206,35 @@
 	</div>
 	<div class="bg__second__section"></div>
 </section>
+@if(!empty($gp3k_overview))
 <section id="content__bottom">
 	<div class="container">
 		<div class="row">
 			<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-	            <h2 class="font-courgette font-black">SEKILAS GP3K</h2>
+	            <h2 class="font-courgette font-black">
+	            	{{ $gp3k_overview['title'] }}
+	            </h2>
 	            <div class="devider"></div>
 	        </div>
 	    </div>
 	    <div class="row">
 	    	<div class="col-md-4">
-	    		<p>
-	    			<span class="first-letter">G</span>
-	    			P3K merupakan bentuk dukungan BUMN dalam rangka program ketahanan pangan nasional dengan target surplus beras nasional 10 juta ton dalam kurun waktu 2011-2015. Sejalan dengan Inpres No. 5 thn 2011: BUMN ikut berperan aktif dalam menjaga ketahanan pangan, oleh karena itu dicanangkanlah Program GP3K (Gerakan Peningkatan Produksi Pangan Berbasis Korporasi) oleh Kementrian Negara BUMN sebagai salah satu usaha pemerintah untuk membantu mewujudkan pencapaian surplus pangan nasional tersebut.
-	    		</p>	
+	    		{!! $gp3k_overview['description_left'] !!}
 	    	</div>
 	    	<div class="col-md-4">
 	    		<div id="content__bottom__image">
 	    			<div class="content__bottom__container">
 	    				<div class="content__bottom__image__container">
-	    					<img src="{{ asset('bin/db/images/gp3k/thumbnail.jpg') }}">
+	    					<img src="{{ $gp3k_overview['thumbnail_url'] }}">
 	    				</div>
 	    			</div>
 	    		</div>
 
 	    	</div>
 	    	<div class="col-md-4">
-	    		<p>
-	    		Sebagai perusahaan pupuk tertua di Indonesia, PT PUSRI telah memberikan kontribusi besar dalam pembangunan pertanian nasional. Sejalan dengan program intensifikasi pertanian yang dicanangkan pemerintah dalam rangka mencapai swasembada pangan, khususnya padi, maka peranan PUSRI sebagai produsen pupuk semakin strategis.
-	    		</p>
-	    		<p>
-	    		Dalam mencapai sasaran tersebut, selain meningkatkan efisiensi biaya produksi sehingga biaya pupuk dapat ditekan seefisien mungkin, PT PUSRI juga mengefektifkan sistim pendistribusian pupuk ke petani dengan prinsip 6 tepat, yaitu; tepat waktu, jenis, dosis, jumlah, harga dan tempat.
-	    		</p>
+	    		{!! $gp3k_overview['description_right'] !!}
 	    	</div>
 	    </div>
 </section>
+@endif
 @endsection

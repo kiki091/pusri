@@ -33,3 +33,9 @@ define('NEWS_IMAGES_DIRECTORY', 'bin/db/images/news/');
 
 define('GCG_THUMBNAIL_DIRECTORY', 'bin/db/images/gcg/');
 define('GCG_IMAGES_DIRECTORY', 'bin/db/images/gcg/');
+
+
+// GP3K Thumbnail Images
+
+define('GP3K_THUMBNAIL_DIRECTORY', 'bin/db/images/gp3k/');
+define('GP3K_IMAGES_DIRECTORY', 'bin/db/images/gp3k/');
