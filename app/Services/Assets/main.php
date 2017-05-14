@@ -4,19 +4,20 @@ namespace App\Services\Assets;
 
 /**
  * TESTIMONIAL
+ * DEFINE IMAGES URL
  */
 
 // Use Default Images If Does'n Exist
 
 
-define('DEFAULT_IMAGE_DIRECTORY', 'bin/db/images/default_images/image-default.jpg');
-define('DEFAULT_THUMBNAIL_IMAGE_DIRECTORY', 'bin/db/images/default_images/thumbnail.jpg');
-define('DEFAULT_THUMBNAIL_MINI_IMAGE_DIRECTORY', 'bin/db/images/default_images/thumbnail-mini.jpg');
-
 // Company Profile Images Bnaner 
 
 define('LOGO_IMAGES_DIRECTORY', 'bin/db/images/logo/');
 define('MAIN_BANNER_TRANS_IMAGE_DIRECTORY', 'bin/db/images/banner/');
+
+// Instagram Images Directory
+
+define('INSTAGRAM_IMAGES_DIRECTORY', 'themes/pusri/front/images/instagram/');
 
 // Category Thumbnail Images
 

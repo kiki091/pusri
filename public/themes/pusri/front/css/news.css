@@ -41,8 +41,9 @@
 
 #content__bottom__image {
     width: auto;
-    margin-right: 39px;
+    margin-right: 19px;
     height: 358px;
+    margin-left: 19px;
 }
 
 #content__bottom__image .content__bottom__container {

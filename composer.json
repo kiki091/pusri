@@ -28,6 +28,7 @@
             "App\\": "app/"
         },
         "files": [
+            "app/Services/Assets/default.php",
             "app/Services/Assets/main.php"
         ]
     },

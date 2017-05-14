@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-header">
 
-            <a class="navbar-brand home" href="#" data-animate-hover="bounce">
+            <a class="navbar-brand home" href="{{ route('MainPage') }}">
                 <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" class="hidden-xs" title="PT Pupuk Sriwidjaja Palembang (Pusri)" style="height: 100%">
                 
                 <img src="{{ asset(LOGO_IMAGES_DIRECTORY.'logo.jpg') }}" alt="PT Pupuk Sriwidjaja Palembang (Pusri)" title="PT Pupuk Sriwidjaja Palembang (Pusri)" class="visible-xs" style="height: 100%;">

@@ -5,7 +5,7 @@
 				<div class="col-md-5">
 					
 				</div>
-				
+				{{--
 				<div class="col-md-3">
                     <div class="content__footer__middle">
                         <h3 class="footer__title">SUBSIDIARY OF</h3>
@@ -20,7 +20,7 @@
                         </div>
                     </div>
 				</div>
-
+                --}}
 				<div class="content_footer_mailing col-md-4 pull-right">
 					<div id="footer-content-js">
 						<div class="desktop-footer-block footer-block-03">
@@ -73,4 +73,24 @@
 			</div>
 		</div>
 	</div>
+    <div class="bottom-footer">
+        <div class="container-fluid has-breakpoint">
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <p class="desktop-footer-copywrite">
+                        {{ trans('global_page.footer_title_copyright') }}
+                    </p>
+                </div>
+                <div id="desktop__content" class="pull-right col-md-3>
+
+                    <div class="desktop-footer-trip-advisor-container">
+                        <a class="desktop-footer-trip-advisor" style="cursor: default;">
+                            <img src="{{ asset(DEFAULT_IMAGE_FOOTER_SVG) }}" width="151" height="32">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+  </div>
 </footer>

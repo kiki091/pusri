@@ -13,6 +13,29 @@ jQuery(window).load(function () {
 
 });
 
+jQuery(document).ready(function(){
+    $('.count__number').each(function () {
+        
+        var data = $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+            
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
+
+jQuery(document).ready(function() {
+	setTimeout(function(){
+		$('.manic-image-container img').css('opacity','1')
+	}, 3000);
+	
+})
+
 /*-----------------------------------------------------------------------------------*/
 /*	MENU
 /*-----------------------------------------------------------------------------------*/

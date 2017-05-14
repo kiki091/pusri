@@ -32,6 +32,8 @@ class Gp3k
             $dataTransform['tag_id'] = isset($data['tag_id']) ? $data['tag_id'] : '';
             $dataTransform['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : '';
             $dataTransform['thumbnail_url'] = isset($data['thumbnail']) ? asset(GP3K_THUMBNAIL_DIRECTORY.rawurlencode($data['thumbnail'])) : '';
+
+            $dataTransform['filename_url'] = isset($data['filename']) ? asset(GP3K_THUMBNAIL_DIRECTORY.rawurlencode($data['filename'])) : '';
             $dataTransform['is_active'] = isset($data['is_active']) ? $data['is_active'] : '';
             $dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
             $dataTransform['slug'] = isset($data['translation']['slug']) ? $data['translation']['slug'] : '';
@@ -43,6 +45,7 @@ class Gp3k
             $dataTransform['tag_id'] = isset($data['tag_id']) ? $data['tag_id'] : '';
             $dataTransform['thumbnail'] = isset($data['thumbnail']) ? $data['thumbnail'] : '';
             $dataTransform['thumbnail_url'] = isset($data['thumbnail']) ? asset(GP3K_THUMBNAIL_DIRECTORY.rawurlencode($data['thumbnail'])) : '';
+            $dataTransform['filename_url'] = isset($data['filename']) ? asset(GP3K_THUMBNAIL_DIRECTORY.rawurlencode($data['filename'])) : '';
             $dataTransform['is_active'] = isset($data['is_active']) ? $data['is_active'] : '';
             $dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
             $dataTransform['slug'] = isset($data['translation']['slug']) ? $data['translation']['slug'] : '';

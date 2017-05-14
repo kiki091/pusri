@@ -14,11 +14,10 @@
 			<!-- PAGE -->
 			@include('pusri.front.partials.top-menu')
 			@include('pusri.front.partials.menu')
-
+			
 			@yield('content')
 
 			@include('pusri.front.partials.footer')
-
 		</div>
 		@include('pusri.front.partials.js_footer')
 			

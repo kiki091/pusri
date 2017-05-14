@@ -34,6 +34,10 @@ h1 {
   width: 100%;
 }
 
+.margin-top {
+  margin-top: 20px;
+}
+
 .bg__second__section {
     background: rgba(31, 33, 31, 0.31);
     visibility: visible;
@@ -1349,7 +1353,7 @@ h1 {
 @media (max-width: 815px){
   .navbar-default .navbar-nav > li > a
     {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 }
 @media (max-width: 480px){

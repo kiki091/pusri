@@ -6276,6 +6276,10 @@ h1 {
   width: 100%;
 }
 
+.margin-top {
+  margin-top: 20px;
+}
+
 .bg__second__section {
     background: rgba(31, 33, 31, 0.31);
     visibility: visible;
@@ -7591,7 +7595,7 @@ h1 {
 @media (max-width: 815px){
   .navbar-default .navbar-nav > li > a
     {
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 }
 @media (max-width: 480px){
@@ -8055,8 +8059,21 @@ address {
     opacity: 0.6;
 }
 
+.images__banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pull-right {
+    float: right;
+}
+
 .margin-top {
     margin-top: 2%;
+}
+
+.margin-bottom {
+    margin-bottom: 2%;
 }
 
 .container:before {
@@ -8194,7 +8211,7 @@ h3.subtitle {
 
 #desktop-footer .top-footer {
     background: #f6f4f1;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     padding-bottom: 38px;
 }
 
@@ -8209,6 +8226,44 @@ h3.subtitle {
 
 #desktop-footer .desktop-footer-block.footer-block-01 {
     padding-top: 8px;
+}
+
+#desktop-footer .bottom-footer {
+    background: #555555;
+}
+
+.container-fluid.has-breakpoint {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+#desktop-footer .desktop-footer-copywrite {
+    font-family: 'Open Sans',Verdana,Geneva,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+    padding-top: 17px;
+}
+#desktop-footer .desktop-footer-trip-advisor-container {
+    text-align: right;
+}
+#desktop-footer .desktop-footer-trip-advisor {
+    margin-top: 12px;
+    margin-bottom: 11px;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+}
+#desktop-footer .desktop-footer-trip-advisor img {
+    display: block;
+}
+.container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .footer-daily-stock {
@@ -8791,18 +8846,22 @@ h3.subtitle {
 }
 
 /* Gallery Style Landing Page */
-#group-landing-gallery-section {
+
+#group-landing-instagram-section {
     overflow: hidden;
 }
-#group-landing-gallery-item-container, #group-landing-gallery-item-container-02 {
-	font-size: 0;
-    height: 215.333px;
+
+#group-landing-instagram-item-container, #group-landing-instagram-item-container-02 {
+    font-size: 0;
+    height: 236px;
     overflow: hidden;
     margin-left: -3px;
     margin-right: -3px;
+    height: 215.333px;
 }
-.group-landing-gallery-item {
-	display: inline-block;
+
+.group-landing-instagram-item {
+    display: inline-block;
     vertical-align: top;
     zoom: 1;
     position: relative;
@@ -8812,11 +8871,102 @@ h3.subtitle {
     padding-right: 3px;
     padding-bottom: 6px;
 }
-.group-landing-gallery-item .gallery-image-container {
-	overflow: hidden;
+.group-landing-instagram-item .group-landing-instagram-title-container {
     position: relative;
+    display: block;
+    width: 100%;
     height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: url(../../images/instagram/group-instagram-01-title-bg.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.instagram-bg-transparent {
+    background: rgba(0, 0, 0, 0.48);
+    height: 100%;
+}
+
+.group-landing-instagram-item .group-landing-instagram-title-container .group-landing-instagram-title-center {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    margin-top: -72px;
+}
+
+.group-landing-instagram-item .group-landing-instagram-title-container h3.title {
+    font-size: 25px;
+    line-height: 28px;
+    margin-bottom: 6px;
+}
+
+.group-landing-instagram-item .group-landing-instagram-title-container h3 {
+    font-family: "Harriet Display",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    line-height: 21px;
+}
+.group-landing-instagram-item .group-landing-instagram-title-container h4 {
+    font-family: "Gotham A","Gotham B",Verdana,Geneva,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #fff;
+    position: absolute;
+    bottom: 14px;
+    bottom: 28px;
+    left: 0;
+    width: 100%;
+}
+
+.group-landing-instagram-item .group-landing-instagram-title-container:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    border: 2px solid #fff;
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    -webkit-opacity: .5;
+    opacity: .5;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
+}
+
+.group-landing-instagram-item {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    position: relative;
+    width: 16.666%;
+    height: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 6px;
+        width: 16.666%;
+}
+
+.group-landing-instagram-item .manic-image-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.manic-image-container {
     background: #d7d7d7;
+}
+
+.manic-image-container {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
@@ -8824,68 +8974,26 @@ h3.subtitle {
     height: 150px;
 }
 
-.gallery-image-container.image-loaded-version img {
-	opacity: 1;
-	display: block;
+.manic-image-container.image-loaded-version img {
+    /*opacity: 1;*/
+    display: block;
     position: absolute;
     top: -55px;
     left: -55px;
-    width: 320px;
+    width: auto;
     height: 320px;
+}
+
+.manic-image-container img {
+    opacity: 0;
     -webkit-transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
     -moz-transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
     -o-transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
     transition: opacity .4s cubic-bezier(.645,.045,.355,1) 0s;
 }
-.galleryItem {
-    color: #797478;
-    font: 10px/1.5 Verdana, Helvetica, sans-serif;
-    float: left;
-    width: 20%;
-    margin: 0px auto;
-    opacity: 0.5;
-}
 
-.galleryItem:hover {
-	opacity: 1;
-}
-
-.galleryItem h3 {
-	text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    margin-left: 3%;
-    font-size: 18px;
-    display: inline-table;
-    font-family: "Harriet Display Light",TimesNewRoman,'Times New Roman',Times,Baskerville,Georgia,serif;
-    display: inline-table;
-}
-
-.galleryItem img {
-	max-width: 100%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-
-/* MEDIA QUERIES*/
-@media only screen and (max-width : 940px),only screen and (max-device-width : 940px){
-	.galleryItem {width: 21%; margin: 2%;}
-}
-
-@media only screen and (max-width : 720px),only screen and (max-device-width : 720px){
-	.galleryItem {width: 33%; margin: 2%;}
-}
-
-@media only screen and (max-width : 530px),only screen and (max-device-width : 530px){
-	.galleryItem {width: 50%; margin: 2%;}
-}
-
-@media only screen and (max-width : 320px),only screen and (max-device-width : 320px){
-	.galleryItem {width: 96%;}
-	.galleryItem img {width: 96%;}
-	.galleryItem h3 {font-size: 18px;}
-	.galleryItem p, {font-size: 18px;}
+.opacity {
+    opacity: 1;
 }
 .row-fluid {
     border-bottom: 0px;
@@ -8930,8 +9038,9 @@ h3.subtitle {
 
 #content__bottom__image {
     width: auto;
-    margin-right: 39px;
+    margin-right: 19px;
     height: 358px;
+    margin-left: 19px;
 }
 
 #content__bottom__image .content__bottom__container {
@@ -10988,6 +11097,44 @@ you can use the generic selector below, but it's slower:
   	}
 }
 
+@media (min-width:769px) {
+	#desktop__content {
+		display: inline-table;
+	}
+
+	#mobile__content {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 768px) {
+	#desktop__content {
+		display: none; visibility: hidden;
+	}
+
+	#mobile__content {
+		display: block;
+	}
+	.f-nav {
+		position: absolute;
+	}
+	.col-mobile-4 {
+		width: 100%;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.content__production__urea {
+		float: left;
+		margin-left: 5%;
+	}
+
+	.content__production__amoniak {
+		float: right;
+		margin-right: 5%;
+	}
+}
+
 @media (min-width: 769px) and (max-width: 1024px){
 	.content-txt{
 	    top:55%;
@@ -11059,6 +11206,10 @@ you can use the generic selector below, but it's slower:
 	    padding: 0px 15px;
 	    margin: 0 0 10px;
 	}
+
+	.group-landing-instagram-item {
+		width: 24.666%;display: inline-table;
+	}
 }
 
 @media (max-width: 640px) {
@@ -11105,6 +11256,9 @@ you can use the generic selector below, but it's slower:
 	.content-txt h2 {
 		font-size: 15px;
 	}
+	.group-landing-instagram-item {
+		width: 32.666%;display: inline-table;
+	}
 }
 
 @media (max-width: 600px) {
@@ -11143,8 +11297,8 @@ you can use the generic selector below, but it's slower:
     .image img {
     	height: 265px;
     }
-    .galleryItem {
-	    width: 46%;
-	    margin: 2%;
+	#group-landing-instagram-section {
+		display: none;
+		visibility: hidden;
 	}
 }
