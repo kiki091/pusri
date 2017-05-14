@@ -176,6 +176,8 @@ return [
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        App\Providers\RouteMenuLocationServiceProvider::class,
+        App\Providers\NavigationHelperServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -236,6 +238,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PusriHelper'=> App\Custom\Facades\PusriHelper::class,
         'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'RouteMenuLocation'=> App\Custom\Facades\RouteMenuLocation::class,
+        'NavigationHelper'=> App\Custom\Facades\NavigationHelper::class,
 
     ],
 

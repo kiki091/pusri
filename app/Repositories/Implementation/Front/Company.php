@@ -33,9 +33,21 @@ class Company extends BaseImplementation implements CompanyInterface
             "is_show_landing" => true,
         ];
 
-        $companyData = $this->company($params);
+        $companyData = $this->company($params, 'asc', 'array', true);
 
         return $this->companyTransformation->getCompanyForLandingTransform($companyData);
+    }
+
+    public function getDetail($slug)
+    {
+        $params = [
+            "is_active" => true,
+            "slug"      => $slug
+        ];
+
+        $companyDetail = $this->company($params, 'asc', 'array', true);
+
+        return $this->companyTransformation->getCompanyForDetailTransform($companyDetail);
     }
 
     /**
@@ -48,7 +60,14 @@ class Company extends BaseImplementation implements CompanyInterface
     {
         $company = $this->company
             ->with('translation')
-            ->with('translations');
+            ->with('translations')
+            ->with('category');
+
+        if(isset($params['slug']) && $params['slug']) {
+            $company->whereHas('translation', function($q) use ($params) {
+                $q->isSlug($params['slug']);
+            });
+        }
 
         if(isset($params['is_active'])) {
             $company->isActive($params['is_active']);
@@ -59,7 +78,7 @@ class Company extends BaseImplementation implements CompanyInterface
 
         switch ($returnType) {
             case 'array':
-                if($returnSingle) 
+                if(!$returnSingle) 
                 {
                     return $company->get()->toArray();
                 } 

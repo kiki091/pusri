@@ -79,11 +79,11 @@ class Navigation
                     'class'             => isset($data['class']) ? $data['class'] : '',
                     'menu_trans'        => $this->getNavigationTranslation($data['menu_trans']),
                 ],
-                'sub_menu' => $this->getSubNavigationTranslation($data['sub_menu']['sub_menu_trans'])
+                'sub_menu' => $this->getSubNavigationTranslation($data['sub_menu']['sub_menu_tran'])
             ];
 
         },$data);
-
+        
         return $dataTranform;
         
     }

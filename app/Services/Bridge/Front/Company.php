@@ -22,4 +22,14 @@ class Company
     {
         return $this->company->getDataForLanding();
     }
+
+    /**
+     * Get Detail Company Overview Page
+     * @param $params
+     * @return mixed
+     */
+    public function getDetail($slug)
+    {
+        return $this->company->getDetail($slug);
+    }
 }

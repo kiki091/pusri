@@ -20,5 +20,13 @@ class CompanyTrans extends BaseModel
 
     protected $guarded = [];
 
-        
+    
+
+    /**
+     * @param $query
+     */
+    public function scopeIsSlug($query, $slug)
+    {
+        return $query->where('slug', $slug);
+    }
 }

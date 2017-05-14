@@ -26,12 +26,21 @@ class Company extends BaseModel
     }
 
     /**
-     * @return mixed
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
      */
     public function translation()
     {
         return $this->belongsTo('App\Models\CompanyTrans', 'id', 'company_profile_id')->where('locale', '=' , $this->getCurrentLocalize());
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\belongsTo
+     */
+    public function category()
+    {
+        return $this->hasMany('App\Models\Category', 'id', 'category_id');
+    }
+
 
     /***************** Scope *****************/
 

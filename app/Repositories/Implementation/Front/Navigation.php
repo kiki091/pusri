@@ -47,7 +47,12 @@ class Navigation extends BaseImplementation implements NavigationInterface
 
     	$topNavigationData = $this->topNavigation($data, 'asc', 'array', true);
         
-        return $this->navigationTransformation->getTopNavigationTransform($topNavigationData);
+        $finalTopNavigationData = $this->navigationTransformation->getTopNavigationTransform($topNavigationData);
+
+        Session::forget('current_top_navigation');
+        Session::put('current_top_navigation', $finalTopNavigationData);
+
+        return $finalTopNavigationData;
     }
 
     public function getNavigation()
@@ -58,7 +63,12 @@ class Navigation extends BaseImplementation implements NavigationInterface
 
         $navigationData = $this->navigation($data, 'asc', 'array', true);
         
-        return $this->navigationTransformation->getNavigationTransform($navigationData);
+        $finalNavigationData = $this->navigationTransformation->getNavigationTransform($navigationData);
+
+        Session::forget('current_menu_navigation');
+        Session::put('current_menu_navigation', $finalNavigationData);
+
+        return $finalNavigationData;
     }
 
     /**

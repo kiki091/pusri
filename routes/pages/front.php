@@ -21,10 +21,10 @@ Route::group(['middleware' => ['web']], function ()
 
 			Route::get('/', 'Pusri\Front\Pages\MainController@index')->name('MainPage');
 
-			/*Route::get('/', function () {
-			    return view('pusri.front.pages.home');
-			});*/
+			Route::group(['prefix' => RouteMenuLocation::setMenuLocation()], function () {
 
+				Route::get('/{slug}', 'Pusri\Front\Pages\CompanyController@profile')->name('CompanyProfile');
+			});
 		});
 
 	});

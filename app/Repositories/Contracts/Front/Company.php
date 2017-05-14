@@ -13,6 +13,10 @@ interface Company
      */
     public function getDataForLanding();
 
-
-
+    /**
+     * Get Detail Page Company Overview
+     * @param $params
+     * @return mixed
+     */
+    public function getDetail($slug);
 }

@@ -27,7 +27,7 @@ class Navigation extends BaseModel
 
     public function sub_menu()
     {
-        return $this->belongsTo('App\Models\SubNavigation', 'id', 'menu_id')->with('sub_menu_trans');
+        return $this->belongsTo('App\Models\SubNavigation', 'id', 'menu_id')->with('sub_menu_tran');
     }
 
     /***************** Scope *****************/

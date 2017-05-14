@@ -42,6 +42,8 @@ class MainController extends FrontController
         $this->gp3k = $gp3k;
         $this->seo = $seo;
         $this->response = $response;
+        $this->getMenuNavigation();
+
     }
 
 
@@ -54,6 +56,8 @@ class MainController extends FrontController
         $data['news_event'] = $this->news->getNewsForLanding();
         $data['gcg_overview'] = $this->gcg->getGCGForLanding();
         $data['gp3k_overview'] = $this->gp3k->getGp3kForLanding();
+        //$data['nav'] = $this->navigation->getNavigation();
+        
         
         $data['seo'] = $this->seo->getSeo(self::SEO_LANDING_KEY);
         //dd($data['seo']);

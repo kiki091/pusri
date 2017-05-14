@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Custom\RouteMenuLocation;
 use App\Http\Controllers\Controller;
 use App\Services\Bridge\Front\Navigation as NavigationService;
 
@@ -23,8 +24,18 @@ class FrontController extends Controller
 		$this->navigation = $navigation;
 
 		$this->_init();
+        $this->getMenuNavigation();
         $this->setJavascriptVariable();
 	}
+
+    
+
+    public function getMenuNavigation()
+    {
+        $menu = $this->navigation->getNavigation();
+
+        return $menu;
+    }
 
 	/**
      * Initial function
@@ -59,12 +70,5 @@ class FrontController extends Controller
 		$top_menu = $this->navigation->getTopNavigation();
 
 		return $top_menu;
-	}
-
-	public function getMenuNavigation()
-	{
-		$menu = $this->navigation->getNavigation();
-
-		return $menu;
 	}
 }

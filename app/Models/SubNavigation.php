@@ -15,7 +15,7 @@ class SubNavigation extends BaseModel
 	    'updated_by',
     ];
 
-    public function sub_menu_trans()
+    public function sub_menu_tran()
     {
         return $this->hasMany('App\Models\SubNavigationTrans', 'sub_menu_id', 'id')->where('locale', '=' , $this->getCurrentLocalize());
     }
