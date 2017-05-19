@@ -77,7 +77,7 @@ class Navigation
             return [
                 'menu'          => [
                     'class'             => isset($data['class']) ? $data['class'] : '',
-                    'menu_trans'        => $this->getNavigationTranslation($data['menu_trans']),
+                    'menu_trans'        => $this->getNavigationTranslation($data['menu_tran']),
                 ],
                 'sub_menu' => $this->getSubNavigationTranslation($data['sub_menu']['sub_menu_tran'])
             ];
@@ -92,15 +92,9 @@ class Navigation
 
     protected function getNavigationTranslation($data)
     {
-    	$dataTranform = array_map(function($data)
-    	{
-    		return [
-
-    			'locale'		=> isset($data['locale']) ? $data['locale'] : '',
-                'title'         => isset($data['title']) ? strtoupper($data['title']) : '',
-                'slug'          => isset($data['slug']) ? $data['slug'] : '',
-    		];
-    	},$data);
+    	$dataTranform['locale']	= isset($data['locale']) ? $data['locale'] : '';
+        $dataTranform['title']  = isset($data['title']) ? strtoupper($data['title']) : '';
+        $dataTranform['slug']   = isset($data['slug']) ? $data['slug'] : '';
 
         return $dataTranform;
 

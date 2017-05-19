@@ -16,15 +16,16 @@ Route::group(['middleware' => ['web']], function ()
 {
 	Route::group(['domain' => env('WORLD_WIDE_WEB') . env('DOMAIN_PREFIX') . env('APP_DOMAIN')], function()
 	{
-		Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => ['localeSessionRedirect', 'localizationRedirect']], function ()
+		Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localize', 'localeSessionRedirect', 'localizationRedirect']], function ()
 		{
 
 			Route::get('/', 'Pusri\Front\Pages\MainController@index')->name('MainPage');
 
 			Route::group(['prefix' => RouteMenuLocation::setMenuLocation()], function () {
 
-				Route::get('/{slug}', 'Pusri\Front\Pages\CompanyController@profile')->name('CompanyProfile');
+				Route::get(LaravelLocalization::transRoute('/{slug}'), 'Pusri\Front\Pages\CompanyController@profile')->name('CompanyProfile');
 			});
+
 		});
 
 	});

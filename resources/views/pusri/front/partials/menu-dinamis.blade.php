@@ -33,13 +33,15 @@
         <div class="container-menu">
             <!-- MENU HEADER -->
             <div class="navbar-collapse collapse" id="navigation">
+
             @if(!empty(RouteMenuLocation::getMainMenuNavigation()))
                 <ul class="nav navbar-nav navbar-center">
                 @foreach(RouteMenuLocation::getMainMenuNavigation() as $key=> $navigation)
-                    @foreach($navigation['menu']['menu_trans'] as $key=> $nav_content)
+
+
                     <li class="{{ $navigation['menu']['class'] }}">
-                        <a href="/#{{ $nav_content['slug'] }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">
-                        {{ $nav_content['title'] }}
+                        <a href="/#{{ $navigation['menu']['menu_trans']['slug'] }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">
+                        {{ $navigation['menu']['menu_trans']['title'] }}
                         <b class="caret"></b></a>
                         @if(isset($navigation['sub_menu']))
                         <ul class="dropdown-menu">
@@ -51,11 +53,11 @@
                                         </div>
                                         @foreach($navigation['sub_menu'] as $key=> $sub_menu)
                                         <div class="col-sm-4">
-                                            <h5>{{ trans('navigation/sub_menu.lable_company_profile') }}</h5>
+                                            {{--<h5>{{ trans('navigation/sub_menu.lable_company_profile') }}</h5>--}}
                                             <ul>
                                                 @foreach($sub_menu as $value)
                                                 <li>
-                                                    <a href="{{ route('CompanyProfile',$nav_content['slug'].'/'.$value['slug']) }}">{{ $value['title'] }}
+                                                    <a href="{{ route('CompanyProfile', $value['slug']) }}">{{ $value['title'] }}
                                                         <i class="fa fa-angle-right pull-right"></i>
                                                     </a>
                                                 </li>
@@ -71,7 +73,6 @@
                         </ul>
                         @endif
                     </li>
-                    @endforeach
                 @endforeach
                 </ul>
             @endif

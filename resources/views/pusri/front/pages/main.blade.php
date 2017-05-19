@@ -1,4 +1,14 @@
 @extends('pusri.front.layout.master')
+
+@section('pageheadtitle')
+    {{ $seo['meta_title'] or 'PT Pupuk Sriwidjaja Palembang (Pusri)' }}
+@stop
+
+@section('seo')
+    <meta name="keywords" content="{{ $seo['meta_keyword'] or '' }}" />
+    <meta name="description" content="{{ $seo['meta_description'] or '' }}" />
+@stop
+
 @section('content')
 <!-- MAIN BANNER -->
 @if(isset($main_banner))
@@ -71,7 +81,7 @@
 	    			<div class="default-content">
 	    				<p>
 	    					{!! $company_overview['desktop']['description_right'] !!}
-	    					<a class="arrow-cta float-right-version">
+	    					<a href="{{ route('CompanyProfile',$company_overview['desktop']['slug'] ) }}" class="arrow-cta float-right-version">
 	    						{{ trans('global_page.global_page_lable_link_cta') }}
 	    					</a>
 	    				</p>

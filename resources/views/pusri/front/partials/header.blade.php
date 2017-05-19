@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="PT. Asia Resource System">
-<title>{{ $seo['meta_title'] or 'PT Pupuk Sriwidjaja Palembang (Pusri)' }}</title>
+<title>@yield('pageheadtitle','PT Pupuk Sriwidjaja Palembang (Pusri)')</title>
 <meta name="author" content="PT Pupuk Sriwidjaja Palembang (Pusri)" />
 <meta name="publisher" content="www.pusri.co.id" />
 <meta name="copyright" content="www.pusri.co.id" />
@@ -16,8 +16,14 @@
 <meta Http-Equiv="Pragma" Content="no-cache">
 <meta Http-Equiv="Expires" Content="0">
 
-<meta content="{{ $seo['meta_description'] }}" name="description">
-<meta content="{{ $seo['meta_keyword'] }}" name="keywords">
+@section('seo')
+	<meta name="title" content="PT Pupuk Sriwidjaja Palembang (Pusri)" />
+    <meta name="keywords" content="Pupuk, Urea, Pupuk Subsidi, Pupuk Non Subsidi, Amoniak" />
+    <meta name="description" content="PT Pupuk Sriwidjaja Palembang (Pusri) adalah Badan Usaha Milik Negara yang didirikan sebagai pelopor produsen pupuk urea di Indonesia" />
+@show
+
+<meta content="{{ isset($seo['meta_description']) ? $seo['meta_description'] : '' }}{{ isset($data['meta_description']) ? $data['meta_description'] : '' }}" name="description">
+<meta content="{{ isset($seo['meta_keyword']) ? $seo['meta_keyword'] : '' }}{{ isset($data['meta_keyword']) ? $data['meta_keyword'] : '' }}" name="keywords">
 
 <link rel="icon" href="{{ asset('themes/pusri/front/images/favicon.ico') }}"> 
 

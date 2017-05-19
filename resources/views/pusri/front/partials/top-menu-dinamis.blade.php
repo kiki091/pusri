@@ -1,16 +1,13 @@
 <div class="font-white" id="top">
     <div class="container">
     	<div class="pull-left">
-    		@if(isset($top_navigation))
+    		@if(!empty(RouteMenuLocation::getTopMenuNavigation()))
     		<div id="top-navigation" class="secondmenu_left">
     			<ul class="add_fix">
-    				@foreach($top_navigation as $key=> $top_nav)
-
-    				@foreach($top_nav['top_menu'] as $key=> $nav)
+    				@foreach(RouteMenuLocation::getTopMenuNavigation() as $key=> $top_nav)
     				<li>
-    					<a href="#">{{ $nav['title'] }}</a>
+    					<a href="#">{{ $top_nav['top_menu']['title'] }}</a>
     				</li>
-    				@endforeach
     				@endforeach
     			</ul>
     		</div>
@@ -29,7 +26,7 @@
 	        <ul class="dropdown-menu" role="menu">
 	        	@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 	            	<li>
-			            <a style="color: #2d2d2d" rel="alternate" hreflang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}">
+			            <a style="color: #2d2d2d" rel="alternate" hreflang="{{$localeCode.'/'.Request::segment(2)}}" href="{{LaravelLocalization::getLocalizedURL($localeCode, Request::segment(2)) }}">
 			                {{ $properties['native'] }}
 			            </a>
 			        </li>

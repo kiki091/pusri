@@ -38,7 +38,7 @@ class Company extends BaseModel
      */
     public function category()
     {
-        return $this->hasMany('App\Models\Category', 'id', 'category_id');
+        return $this->belongsTo('App\Models\Category', 'category_id', 'id')->with('translation');
     }
 
 

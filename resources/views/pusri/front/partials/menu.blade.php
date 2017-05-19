@@ -51,17 +51,19 @@
                                             <h5>{{ trans('navigation/sub_menu.lable_company_profile') }}</h5>
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('CompanyProfile',trans('navigation/slug_menu.slug_menu_company').'/company-overview') }}">{{ trans('navigation/sub_menu.company.company_profile') }} 
+                                                    <a href="{{ route('CompanyProfile',trans('navigation/slug_menu.slug_menu_company').'/'.trans('navigation/slug_sub_menu.slug_company.slug_company_profile')) }}">
+                                                        {{ trans('navigation/sub_menu.company.company_profile') }} 
                                                         <i class="fa fa-angle-right pull-right"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">{{ trans('navigation/sub_menu.company.company_value') }}
+                                                    <a href="{{ route('CompanyProfile',trans('navigation/slug_menu.slug_menu_company').'/'.trans('navigation/slug_sub_menu.slug_company.slug_company_value')) }}">
+                                                        {{ trans('navigation/sub_menu.company.company_value') }}
                                                         <i class="fa fa-angle-right pull-right"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">{{ trans('navigation/sub_menu.company.corporate_identity') }} 
+                                                    <a href="{{ route('CompanyProfile',trans('navigation/slug_menu.slug_menu_company').'/'.trans('navigation/slug_sub_menu.slug_company.slug_corporate_identity')) }}">{{ trans('navigation/sub_menu.company.corporate_identity') }} 
                                                         <i class="fa fa-angle-right pull-right"></i>
                                                     </a>
                                                 </li>

@@ -12,8 +12,8 @@
 		<div class="preloader_hide" style="min-height: 1000px;">
 
 			<!-- PAGE -->
-			@include('pusri.front.partials.top-menu')
-			@include('pusri.front.partials.menu')
+			@include('pusri.front.partials.top-menu-dinamis')
+			@include('pusri.front.partials.menu-dinamis')
 			
 			@yield('content')
 

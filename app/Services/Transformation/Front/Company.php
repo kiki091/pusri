@@ -39,6 +39,7 @@ class Company
     protected function setCompanyForLandingDesktopTransform($data)
     {
     	$dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
+        $dataTransform['slug'] = isset($data['translation']['slug']) ? $data['translation']['slug'] : '';
     	$dataTransform['side_description'] = isset($data['translation']['side_description']) ? $data['translation']['side_description'] : '';
 
         if(PusriHelper::getCurrentLanguageKey() == "id")
@@ -55,6 +56,7 @@ class Company
     protected function setCompanyForLandingMobileTransform($data)
     {
         $dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
+        $dataTransform['slug'] = isset($data['translation']['slug']) ? $data['translation']['slug'] : '';
         $dataTransform['side_description'] = isset($data['translation']['side_description']) ? $data['translation']['side_description'] : '';
 
         if(PusriHelper::getCurrentLanguageKey() == "id")
@@ -88,6 +90,8 @@ class Company
 
     protected function setCompanyForDetailTransform($data)
     {
+        $dataTransform['category'] = isset($data['category']['translation']['title']) ? $data['category']['translation']['title'] : '';
+        $dataTransform['category_slug'] = isset($data['category']['translation']['slug']) ? $data['category']['translation']['slug'] : '';
         $dataTransform['title'] = isset($data['translation']['title']) ? $data['translation']['title'] : '';
         $dataTransform['slug'] = isset($data['translation']['slug']) ? $data['translation']['slug'] : '';
         $dataTransform['side_description'] = isset($data['translation']['side_description']) ? $data['translation']['side_description'] : '';

@@ -16,7 +16,7 @@ class TopNavigation extends BaseModel
 
     public function top_menu_trans()
     {
-        return $this->hasMany('App\Models\TopNavigationTrans', 'top_menu_id', 'id')->where('locale', '=' , $this->getCurrentLocalize());
+        return $this->hasMany('App\Models\TopNavigationTrans', 'top_menu_id', 'id');
     }
 
     public function top_menu_tran()

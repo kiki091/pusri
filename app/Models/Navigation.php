@@ -17,7 +17,7 @@ class Navigation extends BaseModel
 
     public function menu_trans()
     {
-        return $this->hasMany('App\Models\NavigationTrans', 'menu_id', 'id')->where('locale', '=' , $this->getCurrentLocalize());
+        return $this->hasMany('App\Models\NavigationTrans', 'menu_id', 'id');
     }
 
     public function menu_tran()

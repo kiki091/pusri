@@ -6310,7 +6310,6 @@ h1 {
 .secondmenu_left {
     position: absolute;
     top: 13px;
-    left: 10px;
 }
 .secondmenu_left ul {
     list-style: none;
@@ -8526,6 +8525,37 @@ h3.subtitle {
     content: "\e02f";
 }
 
+.breadcrum_box {
+    width: 100%;
+    height: 30px;
+    margin: 30px 0 10px 0;
+}
+
+.breadcrum_box a.home {
+    text-indent: -999em;
+    background: url(../../images/breadcrum_home.png) no-repeat left bottom;
+    height: 18px;
+    width: 20px;
+    padding-left: 0px;
+}
+
+.breadcrum_box a {
+    font-size: 13px;
+    color: #525252;
+    display: block;
+    float: left;
+    position: relative;
+    padding-left: 18px;
+    background: url(../../images/breadcrum_next.png) no-repeat left bottom;
+    padding-right: 9px;
+    line-height: 15px;
+}
+
+.add_fix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
 /* Reset */
 *{margin:0;padding:0;}
 
