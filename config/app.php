@@ -176,6 +176,7 @@ return [
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Spatie\Translatable\TranslatableServiceProvider::class,
         App\Providers\RouteMenuLocationServiceProvider::class,
         App\Providers\NavigationHelperServiceProvider::class,
 
