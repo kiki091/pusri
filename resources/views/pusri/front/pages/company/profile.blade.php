@@ -26,6 +26,10 @@
 @if(isset($data))
 <section id="desktop company-overview" class="page">
 	<div class="container">
+		<div class="breadcrum_box add_fix">
+			<a href="#" class="home" title="Home">Home</a>
+			<a href="#" title="">{{ $data['title'] }}</a>
+		</div>
 		<h2 class="text-center"><b>{{ $data['title'] }}</b></h2>
 		<h3 class="subtitle text-center">{!! $data['side_description'] !!}</h3>
 		<blockquote>{!! $data['highlight_description'] !!}</blockquote>
